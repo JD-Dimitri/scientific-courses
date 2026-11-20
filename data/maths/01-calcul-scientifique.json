@@ -1,0 +1,743 @@
+{
+  "subject": {
+    "slug": "maths",
+    "name": "Mathématiques",
+    "position": 1
+  },
+  "chapter": {
+    "slug": "calcul-scientifique",
+    "number": 1,
+    "title": "Calcul scientifique",
+    "cnamCode": "UTC704",
+    "introHtml": "<p>Ce chapitre est la base de toutes les sciences : écrire un nombre très grand ou très petit, l'arrondir correctement, changer d'unité, vérifier qu'une formule a un sens et dire avec quelle précision on connaît une mesure. C'est la première partie de l'UE UTC704 du Cnam, et il sert à chaque calcul de chimie et de physique.</p>"
+  },
+  "sections": [
+    {
+      "slug": "puissances-de-10",
+      "number": "1.1",
+      "title": "Puissances de 10 et notation scientifique",
+      "courseHtml": "<div class=\"regle\">\n<p>Pour tous entiers \\(a\\) et \\(b\\) :</p>\n\\[10^a\\times10^b=10^{a+b}\\qquad\\frac{10^a}{10^b}=10^{a-b}\\qquad(10^a)^b=10^{ab}\\qquad10^0=1\\qquad10^{-n}=\\frac1{10^n}\\]\n</div>\n<p>La <strong>notation scientifique</strong> d'un nombre est l'écriture \\(a\\times10^n\\) avec \\(1\\le a\\lt10\\) et \\(n\\) entier. Exemple : \\(3\\,500=3{,}5\\times10^3\\) et \\(0{,}02=2\\times10^{-2}\\).</p>\n<p>L'<strong>ordre de grandeur</strong> est la puissance de 10 la plus proche. Pour \\(a\\times10^n\\) : si \\(a\\lt3{,}16\\) (environ \\(\\sqrt{10}\\)), c'est \\(10^n\\) ; sinon, c'est \\(10^{n+1}\\).</p>\n<p>Pour calculer, on traite séparément les nombres et les puissances de 10, puis on remet le résultat en notation scientifique.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Écrire \\(0{,}000\\,45\\) en notation scientifique.</p>",
+          "solutionHtml": "<p>On décale la virgule de 4 rangs vers la droite pour obtenir \\(4{,}5\\). Pour compenser, on multiplie par \\(10^{-4}\\).</p><p>\\(0{,}000\\,45=4{,}5\\times10^{-4}\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Calculer \\((3\\times10^5)\\times(4\\times10^{-2})\\).</p>",
+          "solutionHtml": "<p>\\(3\\times4=12\\) et \\(10^5\\times10^{-2}=10^3\\), donc le produit vaut \\(12\\times10^3\\).</p><p>12 n'est pas entre 1 et 10 : \\(12\\times10^3=1{,}2\\times10^1\\times10^3=1{,}2\\times10^4\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Calculer \\(\\dfrac{6\\times10^{-3}}{2\\times10^{-7}}\\).</p>",
+          "solutionHtml": "<p>\\(\\dfrac62=3\\) et \\(\\dfrac{10^{-3}}{10^{-7}}=10^{-3-(-7)}=10^{4}\\).</p><p>Résultat : \\(3\\times10^4\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Calcule \\(10^3\\times10^4\\).",
+          "correctionHtml": "<p>\\(10^{3+4}=10^7\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Calcule \\(\\dfrac{10^5}{10^2}\\).",
+          "correctionHtml": "<p>\\(10^{5-2}=10^3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Calcule \\(10^{-2}\\times10^{-3}\\).",
+          "correctionHtml": "<p>\\(10^{-2+(-3)}=10^{-5}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Calcule \\((10^2)^3\\).",
+          "correctionHtml": "<p>\\(10^{2\\times3}=10^6\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Écris \\(10^{-3}\\) en écriture décimale.",
+          "correctionHtml": "<p>\\(10^{-3}=\\dfrac1{1000}=0{,}001\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Écris \\(5\\,200\\) en notation scientifique.",
+          "correctionHtml": "<p>\\(5\\,200=5{,}2\\times10^3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Écris \\(0{,}072\\) en notation scientifique.",
+          "correctionHtml": "<p>On décale la virgule de 2 rangs : \\(7{,}2\\times10^{-2}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Écris \\(345\\,000\\,000\\) en notation scientifique.",
+          "correctionHtml": "<p>8 chiffres après le 3 : \\(3{,}45\\times10^8\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Écris \\(0{,}000\\,006\\,1\\) en notation scientifique.",
+          "correctionHtml": "<p>La virgule se décale de 6 rangs : \\(6{,}1\\times10^{-6}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(\\dfrac{10^4}{10^{-3}}\\).",
+          "correctionHtml": "<p>\\(10^{4-(-3)}=10^7\\). Attention au double signe moins.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\((2\\times10^3)\\times(4\\times10^5)\\).",
+          "correctionHtml": "<p>\\(2\\times4=8\\) et \\(10^{3+5}=10^8\\) : \\(8\\times10^8\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\((5\\times10^4)\\times(6\\times10^{-1})\\).",
+          "correctionHtml": "<p>\\(30\\times10^3=3\\times10^4\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(\\dfrac{9\\times10^8}{3\\times10^{-2}}\\).",
+          "correctionHtml": "<p>\\(\\dfrac93=3\\) et \\(10^{8-(-2)}=10^{10}\\) : \\(3\\times10^{10}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Mets \\(47\\times10^5\\) en notation scientifique.",
+          "correctionHtml": "<p>\\(47=4{,}7\\times10^1\\), donc \\(4{,}7\\times10^6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Mets \\(0{,}25\\times10^{-3}\\) en notation scientifique.",
+          "correctionHtml": "<p>\\(0{,}25=2{,}5\\times10^{-1}\\), donc \\(2{,}5\\times10^{-4}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Donne l'ordre de grandeur de \\(7{,}8\\times10^5\\).",
+          "correctionHtml": "<p>\\(7{,}8\\gt3{,}16\\), donc l'ordre de grandeur est \\(10^6\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Calcule \\((2\\times10^{-3})^2\\).",
+          "correctionHtml": "<p>\\(2^2\\times(10^{-3})^2=4\\times10^{-6}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Calcule \\(\\dfrac{(3\\times10^4)\\times(8\\times10^{-6})}{6\\times10^{-3}}\\).",
+          "correctionHtml": "<p>Numérateur : \\(24\\times10^{-2}\\). Puis \\(\\dfrac{24}{6}=4\\) et \\(10^{-2-(-3)}=10^1\\).</p><p>Résultat : \\(4\\times10^1=40\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Une mole contient \\(6{,}02\\times10^{23}\\) molécules. Combien de molécules dans \\(0{,}020\\) mol ?",
+          "correctionHtml": "<p>\\(2{,}0\\times10^{-2}\\times6{,}02\\times10^{23}=12{,}04\\times10^{21}\\approx1{,}2\\times10^{22}\\) molécules.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Calcule \\(\\sqrt{9\\times10^8}\\).",
+          "correctionHtml": "<p>\\(\\sqrt9=3\\) et \\(\\sqrt{10^8}=10^{8/2}=10^4\\), donc \\(3\\times10^4\\). L'exposant doit être pair pour que la racine soit simple.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "chiffres-significatifs",
+      "number": "1.2",
+      "title": "Chiffres significatifs et arrondis",
+      "courseHtml": "<p>Les <strong>chiffres significatifs</strong> d'un nombre sont tous ses chiffres, à partir du premier chiffre non nul en partant de la gauche. Ils indiquent la précision du nombre.</p>\n<ul>\n<li>Les zéros placés <strong>avant</strong> le premier chiffre non nul ne comptent pas : \\(0{,}004\\,5\\) a 2 chiffres significatifs.</li>\n<li>Les zéros placés <strong>après</strong> comptent : \\(3{,}00\\) en a 3, ce qui veut dire qu'on connaît le centième.</li>\n<li>Pour un nombre comme \\(1\\,200\\), il y a ambiguïté. La notation scientifique la lève : \\(1{,}2\\times10^3\\) (2 chiffres) ou \\(1{,}200\\times10^3\\) (4 chiffres).</li>\n</ul>\n<div class=\"regle\"><ul>\n<li><strong>Produit ou quotient</strong> : le résultat a autant de chiffres significatifs que la donnée qui en a le moins.</li>\n<li><strong>Somme ou différence</strong> : le résultat a autant de décimales que la donnée qui en a le moins.</li>\n<li><strong>Arrondi</strong> : on regarde le chiffre suivant. S'il vaut 5 ou plus, on augmente le dernier chiffre gardé.</li>\n<li>On ne garde jamais d'arrondi pendant le calcul : on arrondit seulement le résultat final.</li>\n</ul></div>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Combien de chiffres significatifs a \\(0{,}004\\,50\\) ?</p>",
+          "solutionHtml": "<p>Les zéros de tête ne comptent pas. Restent 4, 5 et le 0 final : 3 chiffres significatifs.</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Calculer \\(2{,}5\\times3{,}141\\,59\\).</p>",
+          "solutionHtml": "<p>La calculatrice donne \\(7{,}853\\,975\\). La donnée la moins précise, 2,5, a 2 chiffres significatifs.</p><p>On arrondit à 2 chiffres : \\(7{,}9\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Calculer \\(12{,}52+3{,}1\\).</p>",
+          "solutionHtml": "<p>Somme brute : \\(15{,}62\\). La donnée la moins précise, 3,1, a 1 décimale.</p><p>Résultat : \\(15{,}6\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Combien de chiffres significatifs a \\(25{,}3\\) ?",
+          "correctionHtml": "<p>3.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Combien de chiffres significatifs a \\(0{,}07\\) ?",
+          "correctionHtml": "<p>1. Les zéros de tête ne comptent pas.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Combien de chiffres significatifs a \\(100{,}5\\) ?",
+          "correctionHtml": "<p>4. Les zéros situés entre deux chiffres non nuls comptent.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Combien de chiffres significatifs a \\(3{,}00\\) ?",
+          "correctionHtml": "<p>3. Les zéros finaux après la virgule comptent.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Combien de chiffres significatifs a \\(0{,}023\\,0\\) ?",
+          "correctionHtml": "<p>3 : le 2, le 3 et le 0 final.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Arrondis \\(3{,}467\\) à 2 chiffres significatifs.",
+          "correctionHtml": "<p>Le chiffre suivant est 6, supérieur à 5 : \\(3{,}5\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Arrondis \\(0{,}083\\,49\\) à 2 chiffres significatifs.",
+          "correctionHtml": "<p>On garde 8 et 3 ; le chiffre suivant est 4 : \\(0{,}083\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Combien de chiffres significatifs a \\(6{,}02\\times10^{23}\\) ?",
+          "correctionHtml": "<p>3. La puissance de 10 ne compte pas.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Arrondis \\(127\\,450\\) à 3 chiffres significatifs, en notation scientifique.",
+          "correctionHtml": "<p>On garde 1, 2, 7 ; le suivant est 4 : \\(1{,}27\\times10^5\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(4{,}2\\times1{,}57\\) avec le bon nombre de chiffres.",
+          "correctionHtml": "<p>\\(6{,}594\\). La donnée la moins précise a 2 chiffres : \\(6{,}6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(9{,}81\\times2{,}0\\) avec le bon nombre de chiffres.",
+          "correctionHtml": "<p>\\(19{,}62\\), à arrondir à 2 chiffres : \\(20\\), qu'on écrit \\(2{,}0\\times10^1\\) pour montrer les 2 chiffres.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(\\dfrac{15{,}0}{3{,}0}\\) avec le bon nombre de chiffres.",
+          "correctionHtml": "<p>\\(5{,}0\\) : 2 chiffres significatifs, comme 3,0.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(7{,}45+2{,}1\\).",
+          "correctionHtml": "<p>\\(9{,}55\\), arrondi à 1 décimale : \\(9{,}6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\(100{,}0-0{,}25\\).",
+          "correctionHtml": "<p>\\(99{,}75\\), arrondi à 1 décimale : \\(99{,}8\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Écris \\(4\\,500\\) avec exactement 2 chiffres significatifs, sans ambiguïté.",
+          "correctionHtml": "<p>\\(4{,}5\\times10^3\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Masse molaire de l'eau : \\(2\\times1{,}008+16{,}00\\) g/mol. Donne le résultat correctement arrondi.",
+          "correctionHtml": "<p>\\(2{,}016+16{,}00=18{,}016\\). Somme : 2 décimales comme 16,00 : \\(18{,}02\\) g/mol.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "\\(n=0{,}025\\,0\\) mol de sel sont dissous dans \\(V=0{,}500\\) L. Calcule \\(c=\\dfrac nV\\).",
+          "correctionHtml": "<p>\\(c=0{,}050\\,0\\) mol/L, avec 3 chiffres significatifs comme les deux données.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Aire d'un disque de rayon \\(r=2{,}5\\) cm ?",
+          "correctionHtml": "<p>\\(\\pi\\times2{,}5^2\\approx19{,}63\\) cm². Le rayon a 2 chiffres : \\(2{,}0\\times10^1\\) cm². \\(\\pi\\) est exact et ne limite pas la précision.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Calcule \\((3{,}0\\times10^2)\\times(2{,}00\\times10^{-3})\\).",
+          "correctionHtml": "<p>\\(6{,}0\\times10^{-1}\\), soit \\(0{,}60\\) : 2 chiffres, comme 3,0.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "On calcule \\(\\frac13\\times3\\) en arrondissant d'abord \\(\\frac13\\) à \\(0{,}33\\). Que se passe-t-il, et quelle règle en tirer ?",
+          "correctionHtml": "<p>On obtient \\(0{,}99\\) au lieu de 1. L'erreur d'arrondi se propage. Règle : garder tous les chiffres de la calculatrice pendant le calcul et n'arrondir que le résultat final.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "unites-et-conversions",
+      "number": "1.3",
+      "title": "Unités, préfixes et conversions",
+      "courseHtml": "<p>Le Système international (SI) repose sur sept unités de base : le mètre (m), le kilogramme (kg), la seconde (s), l'ampère (A), le kelvin (K), la mole (mol) et la candela (cd). Toutes les autres s'en déduisent : le newton vaut \\(\\mathrm{kg\\cdot m\\cdot s^{-2}}\\), le joule \\(\\mathrm{kg\\cdot m^2\\cdot s^{-2}}\\).</p>\n<div class=\"tw\"><table>\n<tr><th>Préfixe</th><td>G</td><td>M</td><td>k</td><td>h</td><td>d</td><td>c</td><td>m</td><td>µ</td><td>n</td><td>p</td></tr>\n<tr><th>Nom</th><td>giga</td><td>méga</td><td>kilo</td><td>hecto</td><td>déci</td><td>centi</td><td>milli</td><td>micro</td><td>nano</td><td>pico</td></tr>\n<tr><th>Facteur</th><td>\\(10^9\\)</td><td>\\(10^6\\)</td><td>\\(10^3\\)</td><td>\\(10^2\\)</td><td>\\(10^{-1}\\)</td><td>\\(10^{-2}\\)</td><td>\\(10^{-3}\\)</td><td>\\(10^{-6}\\)</td><td>\\(10^{-9}\\)</td><td>\\(10^{-12}\\)</td></tr>\n</table></div>\n<div class=\"regle\"><ul>\n<li>Surfaces et volumes : le facteur s'élève au carré ou au cube. \\(1\\ \\mathrm{m^2}=10^4\\ \\mathrm{cm^2}\\) et \\(1\\ \\mathrm{m^3}=10^6\\ \\mathrm{cm^3}\\).</li>\n<li>\\(1\\ \\mathrm{L}=1\\ \\mathrm{dm^3}=10^{-3}\\ \\mathrm{m^3}\\) et \\(1\\ \\mathrm{mL}=1\\ \\mathrm{cm^3}\\).</li>\n<li>Température : \\(T(\\mathrm K)=\\theta(°\\mathrm C)+273{,}15\\).</li>\n<li>Vitesse : \\(1\\ \\mathrm{m/s}=3{,}6\\ \\mathrm{km/h}\\).</li>\n</ul></div>\n<p>Méthode sûre : remplacer chaque unité par sa valeur en unités SI, puis calculer. Par exemple, \\(1\\ \\mathrm{km/h}=\\dfrac{1\\,000\\ \\mathrm m}{3\\,600\\ \\mathrm s}\\).</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Convertir 72 km/h en m/s.</p>",
+          "solutionHtml": "<p>\\(72\\ \\mathrm{km/h}=\\dfrac{72\\,000\\ \\mathrm m}{3\\,600\\ \\mathrm s}=20\\ \\mathrm{m/s}\\). Raccourci : diviser par 3,6.</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Convertir 250 mL en m³.</p>",
+          "solutionHtml": "<p>\\(1\\ \\mathrm{mL}=1\\ \\mathrm{cm^3}=10^{-6}\\ \\mathrm{m^3}\\), donc \\(250\\ \\mathrm{mL}=250\\times10^{-6}=2{,}5\\times10^{-4}\\ \\mathrm{m^3}\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Convertir une masse volumique de 1 g/cm³ en kg/m³.</p>",
+          "solutionHtml": "<p>\\(\\dfrac{1\\ \\mathrm g}{1\\ \\mathrm{cm^3}}=\\dfrac{10^{-3}\\ \\mathrm{kg}}{10^{-6}\\ \\mathrm{m^3}}=10^3\\ \\mathrm{kg/m^3}\\). L'eau a donc une masse volumique de 1 000 kg/m³.</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Convertis 3,5 km en m.",
+          "correctionHtml": "<p>\\(3{,}5\\times10^3=3\\,500\\) m.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 450 mg en g.",
+          "correctionHtml": "<p>\\(450\\times10^{-3}=0{,}450\\) g.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 2 h en s.",
+          "correctionHtml": "<p>\\(2\\times3\\,600=7\\,200\\) s.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 0,75 L en mL.",
+          "correctionHtml": "<p>750 mL.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 25 °C en kelvins.",
+          "correctionHtml": "<p>\\(25+273{,}15=298{,}15\\) K, soit environ 298 K.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 5 µm en m.",
+          "correctionHtml": "<p>\\(5\\times10^{-6}\\) m.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Convertis 12 ns en s, en notation scientifique.",
+          "correctionHtml": "<p>\\(12\\times10^{-9}=1{,}2\\times10^{-8}\\) s.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Combien de cm² dans 1 m² ?",
+          "correctionHtml": "<p>\\(1\\ \\mathrm{m}=10^2\\ \\mathrm{cm}\\), donc \\(1\\ \\mathrm{m^2}=(10^2)^2=10^4\\ \\mathrm{cm^2}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 3 dm³ en L, puis en m³.",
+          "correctionHtml": "<p>3 L, et \\(3\\times10^{-3}\\ \\mathrm{m^3}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 90 km/h en m/s.",
+          "correctionHtml": "<p>\\(90\\div3{,}6=25\\) m/s.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 15 m/s en km/h.",
+          "correctionHtml": "<p>\\(15\\times3{,}6=54\\) km/h.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 2,5 cm² en m².",
+          "correctionHtml": "<p>\\(1\\ \\mathrm{cm^2}=10^{-4}\\ \\mathrm{m^2}\\), donc \\(2{,}5\\times10^{-4}\\ \\mathrm{m^2}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 0,5 m³ en L.",
+          "correctionHtml": "<p>\\(1\\ \\mathrm{m^3}=1\\,000\\) L, donc 500 L.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Sachant que 1 bar vaut \\(10^5\\) Pa, convertis 2,3 bar en Pa.",
+          "correctionHtml": "<p>\\(2{,}3\\times10^5\\) Pa.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Convertis 4,2 GHz en Hz.",
+          "correctionHtml": "<p>\\(4{,}2\\times10^9\\) Hz.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "La masse volumique de l'éthanol vaut 0,79 g/cm³. Convertis-la en kg/m³.",
+          "correctionHtml": "<p>\\(1\\ \\mathrm{g/cm^3}=1\\,000\\ \\mathrm{kg/m^3}\\), donc 790 kg/m³.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Convertis une concentration de 2 g/L en mg/mL.",
+          "correctionHtml": "<p>\\(\\dfrac{2\\ \\mathrm g}{1\\ \\mathrm L}=\\dfrac{2\\,000\\ \\mathrm{mg}}{1\\,000\\ \\mathrm{mL}}=2\\ \\mathrm{mg/mL}\\). Les deux unités sont équivalentes.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Convertis 1 g/L en kg/m³.",
+          "correctionHtml": "<p>\\(\\dfrac{10^{-3}\\ \\mathrm{kg}}{10^{-3}\\ \\mathrm{m^3}}=1\\ \\mathrm{kg/m^3}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Un débit vaut 6 L/min. Convertis-le en m³/s.",
+          "correctionHtml": "<p>\\(\\dfrac{6\\times10^{-3}\\ \\mathrm{m^3}}{60\\ \\mathrm s}=10^{-4}\\ \\mathrm{m^3/s}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Quelle quantité de matière, en mmol, contiennent 50 mL d'une solution à 0,20 mol/L ?",
+          "correctionHtml": "<p>On convertit d'abord le volume : 50 mL = 0,050 L. Puis \\(n=c\\times V=0{,}20\\times0{,}050=0{,}010\\) mol = 10 mmol.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "analyse-dimensionnelle",
+      "number": "1.4",
+      "title": "Analyse dimensionnelle",
+      "courseHtml": "<p>Chaque grandeur physique a une <strong>dimension</strong>, qui dit de quoi elle est faite, indépendamment de l'unité choisie. On note les dimensions de base L (longueur), M (masse), T (temps), I (intensité), Θ (température) et N (quantité de matière). On écrit \\([v]\\) pour « dimension de \\(v\\) ».</p>\n<div class=\"tw\"><table>\n<tr><th>Grandeur</th><td>vitesse</td><td>accélération</td><td>force</td><td>énergie</td><td>pression</td><td>concentration</td></tr>\n<tr><th>Dimension</th><td>\\(\\mathrm{L\\,T^{-1}}\\)</td><td>\\(\\mathrm{L\\,T^{-2}}\\)</td><td>\\(\\mathrm{M\\,L\\,T^{-2}}\\)</td><td>\\(\\mathrm{M\\,L^2\\,T^{-2}}\\)</td><td>\\(\\mathrm{M\\,L^{-1}\\,T^{-2}}\\)</td><td>\\(\\mathrm{N\\,L^{-3}}\\)</td></tr>\n</table></div>\n<div class=\"regle\"><ul>\n<li>On ne peut additionner, soustraire ou comparer que des grandeurs de même dimension.</li>\n<li>Les deux membres d'une égalité ont la même dimension. Une formule qui ne respecte pas cette règle est fausse.</li>\n<li>Ce qu'on met dans une exponentielle, un logarithme, un sinus ou un cosinus est sans dimension.</li>\n</ul></div>\n<p>Deux usages : vérifier une formule, et retrouver la forme d'une formule à une constante près.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Vérifier que l'énergie cinétique \\(E_c=\\frac12mv^2\\) est bien une énergie.</p>",
+          "solutionHtml": "<p>\\(\\left[\\frac12mv^2\\right]=\\mathrm M\\times(\\mathrm{L\\,T^{-1}})^2=\\mathrm{M\\,L^2\\,T^{-2}}\\). C'est la dimension d'une énergie. Le facteur \\(\\frac12\\) n'a pas de dimension.</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>La formule \\(d=v\\,t^2\\) peut-elle être juste ?</p>",
+          "solutionHtml": "<p>\\([v\\,t^2]=\\mathrm{L\\,T^{-1}}\\times\\mathrm T^2=\\mathrm{L\\,T}\\), alors que \\([d]=\\mathrm L\\). Les dimensions diffèrent : la formule est fausse. La bonne est \\(d=v\\,t\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>La période \\(T\\) d'un pendule dépend de sa longueur \\(\\ell\\) et de \\(g\\) (dimension \\(\\mathrm{L\\,T^{-2}}\\)). On cherche \\(T=k\\,\\ell^a g^b\\). Trouver \\(a\\) et \\(b\\).</p>",
+          "solutionHtml": "<p>\\(\\mathrm T^1=\\mathrm L^a\\times(\\mathrm{L\\,T^{-2}})^b=\\mathrm L^{a+b}\\,\\mathrm T^{-2b}\\).</p><p>On identifie : \\(-2b=1\\), donc \\(b=-\\frac12\\) ; et \\(a+b=0\\), donc \\(a=\\frac12\\).</p><p>\\(T=k\\sqrt{\\dfrac\\ell g}\\). La vraie formule a \\(k=2\\pi\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une vitesse ?",
+          "correctionHtml": "<p>Une longueur divisée par un temps : \\(\\mathrm{L\\,T^{-1}}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une surface ?",
+          "correctionHtml": "<p>\\(\\mathrm L^2\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'un volume ?",
+          "correctionHtml": "<p>\\(\\mathrm L^3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une accélération ?",
+          "correctionHtml": "<p>Une vitesse divisée par un temps : \\(\\mathrm{L\\,T^{-2}}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une masse volumique ?",
+          "correctionHtml": "<p>Une masse divisée par un volume : \\(\\mathrm{M\\,L^{-3}}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une fréquence ?",
+          "correctionHtml": "<p>Un nombre de fois par unité de temps : \\(\\mathrm T^{-1}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Dimension d'une concentration molaire ?",
+          "correctionHtml": "<p>Une quantité de matière divisée par un volume : \\(\\mathrm{N\\,L^{-3}}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Dimension d'une force, à partir de \\(F=ma\\) ?",
+          "correctionHtml": "<p>\\(\\mathrm M\\times\\mathrm{L\\,T^{-2}}=\\mathrm{M\\,L\\,T^{-2}}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Dimension d'une énergie, à partir de \\(W=F\\times d\\) ?",
+          "correctionHtml": "<p>\\(\\mathrm{M\\,L\\,T^{-2}}\\times\\mathrm L=\\mathrm{M\\,L^2\\,T^{-2}}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Dimension d'une puissance, à partir de \\(P=\\dfrac Et\\) ?",
+          "correctionHtml": "<p>\\(\\mathrm{M\\,L^2\\,T^{-2}}\\div\\mathrm T=\\mathrm{M\\,L^2\\,T^{-3}}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Dimension d'une pression, à partir de \\(p=\\dfrac FS\\) ?",
+          "correctionHtml": "<p>\\(\\mathrm{M\\,L\\,T^{-2}}\\div\\mathrm L^2=\\mathrm{M\\,L^{-1}\\,T^{-2}}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "La formule \\(x=\\frac12at^2\\) est-elle homogène ?",
+          "correctionHtml": "<p>\\(\\mathrm{L\\,T^{-2}}\\times\\mathrm T^2=\\mathrm L\\). Oui, c'est bien une longueur.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "La formule \\(v=\\dfrac at\\) est-elle homogène ?",
+          "correctionHtml": "<p>\\(\\mathrm{L\\,T^{-2}}\\div\\mathrm T=\\mathrm{L\\,T^{-3}}\\neq\\mathrm{L\\,T^{-1}}\\). Non. La bonne formule est \\(v=at\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Dans \\(e^{-kt}\\), où \\(t\\) est un temps, quelle est la dimension de \\(k\\) ?",
+          "correctionHtml": "<p>\\(kt\\) doit être sans dimension, donc \\([k]=\\mathrm T^{-1}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Une concentration \\(y\\) vérifie \\(y'=ay\\), la dérivée étant prise par rapport au temps. Dimension de \\(a\\) ?",
+          "correctionHtml": "<p>\\([y']=[y]\\,\\mathrm T^{-1}\\), donc \\([a]=\\mathrm T^{-1}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Vérifie que \\(E=mc^2\\) est homogène.",
+          "correctionHtml": "<p>\\(\\mathrm M\\times(\\mathrm{L\\,T^{-1}})^2=\\mathrm{M\\,L^2\\,T^{-2}}\\) : c'est une énergie.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Vérifie que la pression dans un liquide \\(p=\\rho\\,g\\,h\\) est homogène.",
+          "correctionHtml": "<p>\\(\\mathrm{M\\,L^{-3}}\\times\\mathrm{L\\,T^{-2}}\\times\\mathrm L=\\mathrm{M\\,L^{-1}\\,T^{-2}}\\) : c'est une pression.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "La vitesse d'un objet lâché d'une hauteur \\(h\\) dépend de \\(g\\) et \\(h\\) : \\(v=k\\,g^a h^b\\). Trouve \\(a\\) et \\(b\\).",
+          "correctionHtml": "<p>\\(\\mathrm{L\\,T^{-1}}=\\mathrm L^{a+b}\\,\\mathrm T^{-2a}\\). Donc \\(-2a=-1\\), \\(a=\\frac12\\), et \\(a+b=1\\), \\(b=\\frac12\\).</p><p>\\(v=k\\sqrt{gh}\\). La vraie formule a \\(k=\\sqrt2\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Dans la loi des gaz \\(pV=nRT\\), quelle est la dimension de \\(R\\) ?",
+          "correctionHtml": "<p>\\([R]=\\dfrac{[p][V]}{[n][T]}=\\dfrac{\\mathrm{M\\,L^2\\,T^{-2}}}{\\mathrm N\\,\\Theta}=\\mathrm{M\\,L^2\\,T^{-2}\\,N^{-1}\\,\\Theta^{-1}}\\), ce qui correspond à l'unité J/(mol·K).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Un composé s'évapore selon \\(m(t)=m_0\\,e^{-t/\\tau}\\). Quelle est la dimension de \\(\\tau\\), et que représente-t-il ?",
+          "correctionHtml": "<p>\\(t/\\tau\\) est sans dimension, donc \\(\\tau\\) est un temps. C'est le temps caractéristique : au bout de \\(\\tau\\), il reste \\(m_0/e\\), soit environ 37 % de la masse.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "incertitudes",
+      "number": "1.5",
+      "title": "Incertitudes de mesure",
+      "courseHtml": "<p>Aucune mesure n'est exacte. On écrit le résultat sous la forme \\(x=x_m\\pm U(x)\\), avec l'unité. Cela signifie que la vraie valeur se trouve très probablement entre \\(x_m-U\\) et \\(x_m+U\\).</p>\n<ul>\n<li>L'<strong>incertitude relative</strong> \\(\\dfrac{U(x)}{x_m}\\), en pourcentage, permet de comparer la précision de mesures différentes.</li>\n<li>On écrit l'incertitude avec 1 ou 2 chiffres significatifs, et la valeur avec le même nombre de décimales.</li>\n<li>Deux mesures sont <strong>compatibles</strong> si leurs intervalles se chevauchent.</li>\n</ul>\n<div class=\"regle\">\n<p><strong>Propagation</strong>, dans la méthode utilisée au lycée et en premier cycle :</p>\n<ul>\n<li>Somme ou différence : \\(U(a\\pm b)=\\sqrt{U(a)^2+U(b)^2}\\).</li>\n<li>Produit ou quotient : les incertitudes <em>relatives</em> se combinent de la même façon, \\(\\dfrac{U}{|q|}=\\sqrt{\\left(\\dfrac{U(a)}a\\right)^2+\\left(\\dfrac{U(b)}b\\right)^2}\\).</li>\n<li>Puissance : \\(\\dfrac{U(a^n)}{|a^n|}=|n|\\,\\dfrac{U(a)}{a}\\).</li>\n<li>Série de \\(n\\) mesures : on prend la moyenne \\(\\bar x\\) ; son incertitude vaut \\(\\dfrac s{\\sqrt n}\\), où \\(s\\) est l'écart-type de la série.</li>\n</ul>\n</div>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Une longueur vaut \\(12{,}4\\pm0{,}1\\) cm. Quelle est l'incertitude relative ?</p>",
+          "solutionHtml": "<p>\\(\\dfrac{0{,}1}{12{,}4}\\approx0{,}008\\), soit 0,8 %.</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>\\(a=10{,}0\\pm0{,}3\\) et \\(b=5{,}0\\pm0{,}4\\). Donner \\(a+b\\) avec son incertitude.</p>",
+          "solutionHtml": "<p>\\(a+b=15{,}0\\) et \\(U=\\sqrt{0{,}3^2+0{,}4^2}=\\sqrt{0{,}25}=0{,}5\\).</p><p>\\(a+b=15{,}0\\pm0{,}5\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Quatre mesures de \\(g\\) donnent 9,8 ; 9,9 ; 9,7 ; 9,8 m/s². Donner le résultat.</p>",
+          "solutionHtml": "<p>Moyenne : \\(\\bar g=9{,}80\\). Écarts à la moyenne : 0 ; 0,1 ; −0,1 ; 0.</p><p>\\(s=\\sqrt{\\dfrac{0+0{,}01+0{,}01+0}{4-1}}\\approx0{,}082\\), puis \\(U=\\dfrac{0{,}082}{\\sqrt4}\\approx0{,}04\\).</p><p>\\(g=9{,}80\\pm0{,}04\\ \\mathrm{m/s^2}\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Écris correctement une longueur mesurée à 25,3 cm, avec une incertitude de 0,2 cm.",
+          "correctionHtml": "<p>\\(L=(25{,}3\\pm0{,}2)\\) cm.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Incertitude relative de \\(50{,}0\\pm0{,}5\\) g ?",
+          "correctionHtml": "<p>\\(\\dfrac{0{,}5}{50{,}0}=1\\ \\%\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Quelle mesure est la plus précise : \\(10{,}0\\pm0{,}1\\) m ou \\(1\\,000\\pm5\\) m ?",
+          "correctionHtml": "<p>Incertitudes relatives : 1 % et 0,5 %. La seconde est plus précise, bien que son incertitude soit plus grande.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Corrige l'écriture \\(12{,}345\\,6\\pm0{,}2\\).",
+          "correctionHtml": "<p>\\(12{,}3\\pm0{,}2\\) : la valeur s'arrête à la même décimale que l'incertitude.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Quel intervalle correspond à \\(4{,}25\\pm0{,}05\\) ?",
+          "correctionHtml": "<p>\\([4{,}20\\,;\\,4{,}30]\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Un volume de 350 mL est connu à 2 % près. Quelle est l'incertitude ?",
+          "correctionHtml": "<p>\\(0{,}02\\times350=7\\) mL, donc \\(350\\pm7\\) mL.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "On mesure \\(g=9{,}6\\ \\mathrm{m/s^2}\\). La valeur de référence est 9,81. Calcule l'écart relatif.",
+          "correctionHtml": "<p>\\(\\dfrac{|9{,}6-9{,}81|}{9{,}81}\\approx0{,}021\\), soit environ 2,1 %.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\((20{,}0\\pm0{,}2)+(15{,}0\\pm0{,}2)\\).",
+          "correctionHtml": "<p>\\(U=\\sqrt{0{,}04+0{,}04}\\approx0{,}28\\), arrondi à 0,3. Résultat : \\(35{,}0\\pm0{,}3\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Calcule \\((50{,}0\\pm0{,}3)-(20{,}0\\pm0{,}4)\\).",
+          "correctionHtml": "<p>\\(U=\\sqrt{0{,}09+0{,}16}=0{,}5\\). Résultat : \\(30{,}0\\pm0{,}5\\). L'incertitude augmente aussi pour une différence.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Moyenne des mesures 12 ; 14 ; 13 ; 13 ?",
+          "correctionHtml": "<p>\\(\\dfrac{52}4=13\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Deux mesures donnent \\(3{,}2\\pm0{,}1\\) et \\(3{,}5\\pm0{,}1\\). Sont-elles compatibles ?",
+          "correctionHtml": "<p>Intervalles \\([3{,}1\\,;3{,}3]\\) et \\([3{,}4\\,;3{,}6]\\) : ils ne se chevauchent pas. Non compatibles.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Un rectangle mesure \\(10{,}0\\pm0{,}1\\) cm sur \\(5{,}0\\pm0{,}1\\) cm. Donne son aire avec l'incertitude.",
+          "correctionHtml": "<p>Incertitudes relatives : 1 % et 2 %. Combinées : \\(\\sqrt{1+4}\\approx2{,}2\\ \\%\\).</p><p>\\(A=50\\ \\mathrm{cm^2}\\), \\(U\\approx0{,}022\\times50\\approx1{,}1\\). Résultat : \\(A=50\\pm1\\ \\mathrm{cm^2}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Un coureur parcourt \\(100{,}0\\pm0{,}5\\) m en \\(12{,}5\\pm0{,}1\\) s. Donne sa vitesse avec l'incertitude.",
+          "correctionHtml": "<p>\\(v=8{,}00\\) m/s. Relatives : 0,5 % et 0,8 %, combinées \\(\\sqrt{0{,}25+0{,}64}\\approx0{,}94\\ \\%\\).</p><p>\\(U\\approx0{,}08\\) : \\(v=8{,}00\\pm0{,}08\\) m/s.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Le rayon d'un disque est connu à 2 % près. À combien près connaît-on son aire ?",
+          "correctionHtml": "<p>L'aire est en \\(r^2\\) : l'incertitude relative est multipliée par 2, soit 4 %.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Série de mesures : 2,1 ; 2,3 ; 2,2 ; 2,0 ; 2,4. Donne le résultat avec son incertitude.",
+          "correctionHtml": "<p>Moyenne : 2,20. Écarts : −0,1 ; 0,1 ; 0 ; −0,2 ; 0,2, dont les carrés font 0,10 au total.</p><p>\\(s=\\sqrt{\\dfrac{0{,}10}{4}}\\approx0{,}158\\), puis \\(U=\\dfrac{0{,}158}{\\sqrt5}\\approx0{,}07\\).</p><p>Résultat : \\(2{,}20\\pm0{,}07\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "\\(n=0{,}010\\,0\\) mol à 1 % près, dissous dans \\(V=100{,}0\\) mL à 0,5 % près. Donne \\(c=\\dfrac nV\\) avec l'incertitude.",
+          "correctionHtml": "<p>\\(c=\\dfrac{0{,}010\\,0}{0{,}100\\,0}=0{,}100\\) mol/L. Relative : \\(\\sqrt{1+0{,}25}\\approx1{,}1\\ \\%\\).</p><p>\\(U\\approx0{,}001\\) : \\(c=0{,}100\\pm0{,}001\\) mol/L.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Combien de fois plus de mesures faut-il faire pour diviser par 3 l'incertitude sur la moyenne ?",
+          "correctionHtml": "<p>\\(U=\\dfrac s{\\sqrt n}\\). Pour diviser \\(U\\) par 3, il faut multiplier \\(\\sqrt n\\) par 3, donc \\(n\\) par 9.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "L'arête d'un cube vaut \\(2{,}00\\pm0{,}02\\) cm. Donne son volume avec l'incertitude.",
+          "correctionHtml": "<p>\\(V=8{,}00\\ \\mathrm{cm^3}\\). Relative sur l'arête : 1 %, donc 3 % sur le volume (puissance 3).</p><p>\\(U=0{,}24\\) : \\(V=8{,}0\\pm0{,}2\\ \\mathrm{cm^3}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Pourquoi n'écrit-on jamais une incertitude avec 4 ou 5 chiffres ?",
+          "correctionHtml": "<p>L'incertitude est elle-même une estimation grossière. Lui donner beaucoup de chiffres afficherait une précision qu'on n'a pas.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Un dosage donne \\(c=0{,}098\\pm0{,}003\\) mol/L. L'étiquette annonce 0,100 mol/L. Le produit est-il conforme ?",
+          "correctionHtml": "<p>Écart : \\(|0{,}098-0{,}100|=0{,}002\\), plus petit que l'incertitude 0,003. La valeur de l'étiquette est dans l'intervalle \\([0{,}095\\,;0{,}101]\\) : le produit est conforme.</p>"
+        }
+      ]
+    }
+  ],
+  "exam": [
+    {
+      "level": 1,
+      "statementHtml": "Calcule \\((4\\times10^3)\\times(2\\times10^{-5})\\). <em>(1.1)</em>",
+      "correctionHtml": "<p>\\(8\\times10^{-2}\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Combien de chiffres significatifs a \\(0{,}005\\,60\\) ? <em>(1.2)</em>",
+      "correctionHtml": "<p>3 : le 5, le 6 et le 0 final.</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Convertis 350 g en kg. <em>(1.3)</em>",
+      "correctionHtml": "<p>0,350 kg.</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Dimension d'une vitesse ? <em>(1.4)</em>",
+      "correctionHtml": "<p>\\(\\mathrm{L\\,T^{-1}}\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Incertitude relative de \\(1{,}25\\pm0{,}05\\) m ? <em>(1.5)</em>",
+      "correctionHtml": "<p>\\(\\dfrac{0{,}05}{1{,}25}=4\\ \\%\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Écris \\(0{,}000\\,089\\) en notation scientifique. <em>(1.1)</em>",
+      "correctionHtml": "<p>\\(8{,}9\\times10^{-5}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Convertis 36 km/h en m/s. <em>(1.3)</em>",
+      "correctionHtml": "<p>\\(36\\div3{,}6=10\\) m/s.</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Calcule \\(3{,}2\\times1{,}456\\) avec le bon nombre de chiffres. <em>(1.2)</em>",
+      "correctionHtml": "<p>\\(4{,}659\\,2\\), arrondi à 2 chiffres : \\(4{,}7\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Convertis 2 L en m³. <em>(1.3)</em>",
+      "correctionHtml": "<p>\\(2\\times10^{-3}\\ \\mathrm{m^3}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Ordre de grandeur de \\(0{,}004\\,2\\) ? <em>(1.1)</em>",
+      "correctionHtml": "<p>\\(0{,}004\\,2=4{,}2\\times10^{-3}\\), et \\(4{,}2\\gt3{,}16\\), donc l'ordre de grandeur est \\(10^{-2}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "La formule \\(x=v\\times t\\) est-elle homogène ? <em>(1.4)</em>",
+      "correctionHtml": "<p>\\(\\mathrm{L\\,T^{-1}}\\times\\mathrm T=\\mathrm L\\). Oui.</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Calcule \\(\\dfrac{8\\times10^6}{4\\times10^{-2}}\\). <em>(1.1)</em>",
+      "correctionHtml": "<p>\\(2\\times10^{8}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "20,0 g de liquide occupent 25,0 mL. Masse volumique en g/mL, puis en kg/m³ ? <em>(1.3)</em>",
+      "correctionHtml": "<p>\\(\\dfrac{20{,}0}{25{,}0}=0{,}800\\) g/mL, soit 800 kg/m³.</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Calcule \\((12{,}0\\pm0{,}2)+(8{,}0\\pm0{,}2)\\). <em>(1.5)</em>",
+      "correctionHtml": "<p>\\(20{,}0\\pm0{,}3\\), car \\(\\sqrt{0{,}04+0{,}04}\\approx0{,}28\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "La force d'un ressort vaut \\(F=-k\\,x\\), où \\(x\\) est un allongement. Dimension de \\(k\\) ? <em>(1.4)</em>",
+      "correctionHtml": "<p>\\([k]=\\dfrac{\\mathrm{M\\,L\\,T^{-2}}}{\\mathrm L}=\\mathrm{M\\,T^{-2}}\\), ce qui correspond à l'unité N/m.</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Quantité de matière dans 25,0 mL d'une solution à 0,040 0 mol/L ? <em>(1.3)</em>",
+      "correctionHtml": "<p>\\(n=0{,}040\\,0\\times0{,}025\\,0=1{,}00\\times10^{-3}\\) mol, soit 1,00 mmol.</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "9,0 g d'eau représentent 0,50 mol. Combien de molécules ? (\\(N_A=6{,}02\\times10^{23}\\)) <em>(1.1 et 1.2)</em>",
+      "correctionHtml": "<p>\\(0{,}50\\times6{,}02\\times10^{23}=3{,}01\\times10^{23}\\), arrondi à 2 chiffres : \\(3{,}0\\times10^{23}\\) molécules.</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "L'énergie \\(E\\) d'un objet en mouvement dépend de sa masse \\(m\\) et de sa vitesse \\(v\\) : \\(E=k\\,m^a v^b\\). Trouve \\(a\\) et \\(b\\). <em>(1.4)</em>",
+      "correctionHtml": "<p>\\(\\mathrm{M\\,L^2\\,T^{-2}}=\\mathrm M^a\\,\\mathrm L^b\\,\\mathrm T^{-b}\\). Donc \\(a=1\\) et \\(b=2\\) : \\(E=k\\,m\\,v^2\\). La vraie formule a \\(k=\\frac12\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "\\(m=50{,}0\\pm0{,}1\\) g et \\(V=40{,}0\\pm0{,}4\\) mL. Donne \\(\\rho=\\dfrac mV\\) avec l'incertitude. <em>(1.5)</em>",
+      "correctionHtml": "<p>\\(\\rho=1{,}25\\) g/mL. Relatives : 0,2 % et 1 %, combinées \\(\\sqrt{0{,}04+1}\\approx1{,}02\\ \\%\\).</p><p>\\(U\\approx0{,}013\\) : \\(\\rho=1{,}25\\pm0{,}01\\) g/mL.</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Une molécule odorante s'évapore selon \\(m(t)=m_0\\,e^{-t/\\tau}\\), avec \\(\\tau=2{,}0\\) h. Quel pourcentage de la masse reste-t-il au bout de 3 h ? <em>(1.3 et 1.4)</em>",
+      "correctionHtml": "<p>Mêmes unités d'abord : \\(\\dfrac t\\tau=\\dfrac{3\\ \\mathrm h}{2{,}0\\ \\mathrm h}=1{,}5\\), sans dimension.</p><p>\\(e^{-1{,}5}\\approx0{,}22\\) : il reste environ 22 % de la masse.</p>"
+    }
+  ]
+}

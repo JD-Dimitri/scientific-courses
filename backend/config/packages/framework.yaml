@@ -1,0 +1,15 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+
+    # Connexion de l'élève par cookie de session.
+    # SameSite=Lax bloque l'envoi du cookie depuis un autre site : protection contre le CSRF.
+    session:
+        cookie_secure: auto
+        cookie_samesite: lax
+        cookie_httponly: true
+
+when@test:
+    framework:
+        test: true
+        session:
+            storage_factory_id: session.storage.factory.mock_file
