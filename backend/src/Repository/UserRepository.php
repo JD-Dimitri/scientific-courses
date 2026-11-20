@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
@@ -12,7 +13,7 @@ use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 /**
  * @extends ServiceEntityRepository<User>
  */
-class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
+class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface, UserLoaderInterface
 {
     public function __construct(ManagerRegistry $registry)
     {
@@ -22,6 +23,29 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     public function findOneByEmail(string $email): ?User
     {
         return $this->findOneBy(['email' => mb_strtolower(trim($email))]);
+    }
+
+    /**
+     * Utilisé par la connexion : on accepte l'adresse e-mail ou l'identifiant.
+     */
+    public function loadUserByIdentifier(string $identifier): ?User
+    {
+        $identifier = mb_strtolower(trim($identifier));
+
+        return $this->createQueryBuilder('u')
+            ->where('u.email = :id OR u.username = :id')
+            ->setParameter('id', $identifier)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+    /** @return list<User> */
+    public function findStudents(): array
+    {
+        return $this->createQueryBuilder('u')
+            ->orderBy('u.createdAt', 'DESC')
+            ->getQuery()
+            ->getResult();
     }
 
     /**

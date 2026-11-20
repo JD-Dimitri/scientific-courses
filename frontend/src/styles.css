@@ -62,6 +62,16 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
 .topbar-inner { max-width: 820px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 12px; }
 .brand { font: 800 18px var(--display); color: var(--ink); text-decoration: none; margin-right: auto; }
 .who { font: 600 13px var(--mono); color: var(--mute); }
+.admin-link { font: 600 13px var(--mono); color: var(--ambre); text-decoration: none; }
+
+/* Administration */
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+.admin-table { border-collapse: collapse; font-size: 15px; min-width: 100%; }
+.admin-table th, .admin-table td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; white-space: nowrap; }
+.admin-table th { font: 600 12px var(--mono); color: var(--mute); text-transform: uppercase; letter-spacing: .05em; }
+.num-cell { font-variant-numeric: tabular-nums; text-align: right; }
+.role { font: 600 11px var(--mono); padding: 1px 6px; border: 1px solid var(--mute); border-radius: 3px; color: var(--mute); }
+.role-admin { color: var(--ambre); border-color: var(--ambre); }
 
 /* Pages */
 .page { max-width: 820px; margin: 0 auto; padding: 28px 16px 80px; position: relative; }

@@ -14,6 +14,9 @@ Niveau visé pour la première version : de la terminale à l'entrée en prépa.
 
 - [x] Structure du dépôt : `backend/` Symfony 7.4, `frontend/` React, `data/`
 - [x] Compte élève : inscription, connexion, déconnexion, session par cookie, limite de 5 essais en 15 minutes
+- [x] Connexion par e-mail ou par identifiant
+- [x] Rôle administrateur et page Administration (liste des élèves et de leur progression)
+- [x] Comptes de test `admin` / `admin-test` et `eleve1` / `eleve-test` (commande `app:create-demo-accounts`, refusée en production)
 - [x] Mot de passe oublié : e-mail avec lien valable 1 h, utilisable une fois (Mailpit en local)
 - [x] Modèle de données : matière, chapitre, sous-chapitre, exemple corrigé, question (entraînement ou examen), réponse de l'élève
 - [x] API des cours et de la progression

@@ -50,6 +50,36 @@ class AttemptRepository extends ServiceEntityRepository
     }
 
     /**
+     * Bilan de tous les élèves, pour l'administration : [idÉlève => ['answered' => n, 'correct' => n]].
+     *
+     * @return array<int, array{answered: int, correct: int, lastActivity: mixed}>
+     */
+    public function summaryByUser(): array
+    {
+        $rows = $this->createQueryBuilder('a')
+            ->select(
+                'IDENTITY(a.user) AS userId',
+                'COUNT(a.id) AS answered',
+                'SUM(CASE WHEN a.correct = true THEN 1 ELSE 0 END) AS correct',
+                'MAX(a.answeredAt) AS lastActivity',
+            )
+            ->groupBy('a.user')
+            ->getQuery()
+            ->getArrayResult();
+
+        $summary = [];
+        foreach ($rows as $row) {
+            $summary[(int) $row['userId']] = [
+                'answered' => (int) $row['answered'],
+                'correct' => (int) $row['correct'],
+                'lastActivity' => $row['lastActivity'],
+            ];
+        }
+
+        return $summary;
+    }
+
+    /**
      * Bilan par chapitre pour un élève : [idChapitre => ['answered' => n, 'correct' => n]].
      *
      * @return array<int, array{answered: int, correct: int}>

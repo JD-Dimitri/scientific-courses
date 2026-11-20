@@ -49,7 +49,17 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:diff
 php bin/console doctrine:migrations:migrate
 php bin/console app:import-chapter ../data/maths/01-calcul-scientifique.json
+php bin/console app:create-demo-accounts
 ```
+
+La dernière commande crée deux comptes de test (refusée en production, car ces mots de passe sont publics) :
+
+| Identifiant | Mot de passe | Rôle |
+|---|---|---|
+| `admin` | `admin-test` | Administrateur : accès à la page Administration |
+| `eleve1` | `eleve-test` | Élève |
+
+On peut se connecter avec l'identifiant ou l'adresse e-mail, sans tenir compte des majuscules (`Eleve1` fonctionne).
 
 Lance enfin l'API :
 
@@ -79,7 +89,7 @@ Toutes les routes sont sous `/api`. Sauf mention contraire, il faut être connec
 | Méthode | Route | Rôle |
 |---|---|---|
 | POST | `/register` | Créer un compte `{firstName, email, password}`. Public. |
-| POST | `/login` | Se connecter `{email, password}`. Public. 5 essais ratés en 15 min, puis blocage. |
+| POST | `/login` | Se connecter `{identifier, password}`, avec l'e-mail ou l'identifiant. Public. 5 essais ratés en 15 min, puis blocage. |
 | POST | `/logout` | Se déconnecter. |
 | GET | `/me` | L'élève connecté. |
 | POST | `/reset-password/request` | Recevoir un lien par e-mail `{email}`. Public. Même réponse que le compte existe ou non. |
@@ -88,6 +98,7 @@ Toutes les routes sont sous `/api`. Sauf mention contraire, il faut être connec
 | GET | `/chapters/{slug}` | Un chapitre complet et les réponses déjà données. |
 | PUT | `/questions/{id}/attempt` | Enregistrer `{correct: true\|false}`. |
 | DELETE | `/questions/{id}/attempt` | Annuler la réponse à une question. |
+| GET | `/admin/students` | Liste des comptes et progression de chacun. Administrateurs seulement. |
 
 ## Sécurité
 

@@ -16,14 +16,15 @@ export function AuthProvider({ children }) {
       .finally(() => setLoading(false));
   }, []);
 
-  const login = useCallback(async (email, password) => {
+  // identifier : adresse e-mail ou identifiant (par exemple « admin »)
+  const login = useCallback(async (identifier, password) => {
     try {
-      const data = await api('/login', { method: 'POST', body: { email, password } });
+      const data = await api('/login', { method: 'POST', body: { identifier, password } });
       setUser(data.user);
       return data.user;
     } catch (error) {
       if (error instanceof ApiError && error.status === 401) {
-        throw new ApiError('E-mail ou mot de passe incorrect. Après 5 essais ratés, attends 15 minutes.', 401);
+        throw new ApiError('Identifiant ou mot de passe incorrect. Après 5 essais ratés, attends 15 minutes.', 401);
       }
       throw error;
     }
@@ -61,6 +62,17 @@ export function RequireAuth({ children }) {
 
   if (loading) return <p className="loading">Chargement…</p>;
   if (!user) return <Navigate to="/connexion" replace state={{ from: location.pathname }} />;
+
+  return children;
+}
+
+/** Protège une page réservée aux administrateurs. */
+export function RequireAdmin({ children }) {
+  const { user, loading } = useAuth();
+
+  if (loading) return <p className="loading">Chargement…</p>;
+  if (!user) return <Navigate to="/connexion" replace />;
+  if (!user.isAdmin) return <Navigate to="/" replace />;
 
   return children;
 }

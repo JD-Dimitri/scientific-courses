@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { RequireAuth } from './auth.jsx';
+import { RequireAdmin, RequireAuth } from './auth.jsx';
+import AdminPage from './pages/AdminPage.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/nouveau-mot-de-passe/:token" element={<ResetPassword />} />
       <Route path="/" element={<RequireAuth><Dashboard /></RequireAuth>} />
       <Route path="/chapitres/:slug" element={<RequireAuth><ChapterPage /></RequireAuth>} />
+      <Route path="/admin" element={<RequireAdmin><AdminPage /></RequireAdmin>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

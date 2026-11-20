@@ -16,12 +16,21 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
 #[UniqueEntity(fields: ['email'], message: 'Un compte existe déjà avec cette adresse e-mail.')]
+#[UniqueEntity(fields: ['username'], message: 'Cet identifiant est déjà pris.')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+    public const ROLE_ADMIN = 'ROLE_ADMIN';
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
+
+    /** Identifiant de connexion facultatif, par exemple « admin ». On peut aussi se connecter avec l'e-mail. */
+    #[ORM\Column(length: 50, unique: true, nullable: true)]
+    #[Assert\Length(min: 3, max: 50)]
+    #[Assert\Regex(pattern: '/^[a-z0-9._-]+$/', message: 'L\'identifiant ne peut contenir que des lettres minuscules, chiffres, points, tirets et soulignés.')]
+    private ?string $username = null;
 
     #[ORM\Column(length: 180, unique: true)]
     #[Assert\NotBlank(message: 'L\'adresse e-mail est obligatoire.')]
@@ -64,6 +73,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = mb_strtolower(trim($email));
 
         return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(?string $username): static
+    {
+        $username = null === $username ? null : mb_strtolower(trim($username));
+        $this->username = '' === $username ? null : $username;
+
+        return $this;
+    }
+
+    public function isAdmin(): bool
+    {
+        return \in_array(self::ROLE_ADMIN, $this->getRoles(), true);
     }
 
     public function getFirstName(): string
@@ -127,7 +154,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return [
             'id' => $this->id,
             'email' => $this->email,
+            'username' => $this->username,
             'firstName' => $this->firstName,
+            'isAdmin' => $this->isAdmin(),
         ];
     }
 }

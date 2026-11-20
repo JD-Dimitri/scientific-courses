@@ -3,10 +3,11 @@ security:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
 
     providers:
+        # Sans « property » : Symfony appelle UserRepository::loadUserByIdentifier(),
+        # qui accepte l'adresse e-mail ou l'identifiant.
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: email
 
     firewalls:
         dev:
@@ -15,10 +16,10 @@ security:
         main:
             lazy: true
             provider: app_user_provider
-            # POST /api/login avec {"email": "...", "password": "..."}
+            # POST /api/login avec {"identifier": "e-mail ou identifiant", "password": "..."}
             json_login:
                 check_path: api_login
-                username_path: email
+                username_path: identifier
                 password_path: password
             # 5 essais ratés en 15 minutes, puis blocage temporaire
             login_throttling:
@@ -29,6 +30,7 @@ security:
 
     access_control:
         - { path: ^/api/(login|register|reset-password), roles: PUBLIC_ACCESS }
+        - { path: ^/api/admin, roles: ROLE_ADMIN }
         - { path: ^/api, roles: ROLE_USER }
 
 when@test:

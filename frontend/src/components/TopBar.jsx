@@ -14,6 +14,7 @@ export default function TopBar() {
     <header className="topbar">
       <div className="topbar-inner">
         <Link to="/" className="brand">Scientific Courses</Link>
+        {user?.isAdmin && <Link to="/admin" className="admin-link">Administration</Link>}
         <span className="who">{user?.firstName}</span>
         <button type="button" className="ghost" onClick={handleLogout}>Se déconnecter</button>
       </div>
