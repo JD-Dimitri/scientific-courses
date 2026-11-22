@@ -6,9 +6,14 @@ use App\Entity\User;
 use App\Repository\AttemptRepository;
 use App\Repository\QuestionRepository;
 use App\Repository\UserRepository;
+use App\Service\ResetPasswordMailer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Requirement\Requirement;
+use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 /**
@@ -40,5 +45,31 @@ class AdminController extends AbstractController
         }, $users->findStudents());
 
         return $this->json(['questionCount' => $questionCount, 'students' => $data]);
+    }
+
+    /** Envoie à un élève un lien de réinitialisation de mot de passe par e-mail. */
+    #[Route('/students/{id}/reset-link', name: 'api_admin_reset_link', requirements: ['id' => Requirement::DIGITS], methods: ['POST'])]
+    public function sendResetLink(int $id, UserRepository $users, ResetPasswordMailer $resetMailer): JsonResponse
+    {
+        $user = $users->find($id);
+        if (null === $user) {
+            return $this->json(['error' => 'Compte introuvable.'], Response::HTTP_NOT_FOUND);
+        }
+
+        try {
+            $resetMailer->send($user);
+        } catch (ResetPasswordExceptionInterface) {
+            return $this->json(
+                ['error' => 'Un lien a déjà été envoyé à ce compte il y a moins de 15 minutes.'],
+                Response::HTTP_TOO_MANY_REQUESTS,
+            );
+        } catch (TransportExceptionInterface) {
+            return $this->json(
+                ['error' => 'L\'e-mail n\'a pas pu partir. Vérifie que Mailpit (ou le service d\'envoi) fonctionne.'],
+                Response::HTTP_SERVICE_UNAVAILABLE,
+            );
+        }
+
+        return $this->json(['message' => sprintf('Lien de réinitialisation envoyé à %s.', $user->getEmail())]);
     }
 }

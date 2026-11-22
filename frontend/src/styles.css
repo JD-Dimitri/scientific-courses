@@ -53,6 +53,19 @@ button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid 
   border: 1px solid var(--rule); border-radius: 4px; padding: 10px 12px; width: 100%;
 }
 .field input[aria-invalid="true"] { border-color: var(--rouge); }
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 48px; }
+.eye {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  background: none; color: var(--mute); border: 0; padding: 8px; border-radius: 4px; line-height: 0;
+}
+.eye:hover, .eye[aria-pressed="true"] { color: var(--bille); }
+.forgot-link { display: inline-block; margin-top: 8px; font-size: 15px; }
+.reset-cell { white-space: normal !important; min-width: 220px; }
+.reset-cell button { white-space: nowrap; }
+.reset-ok, .reset-ko { display: block; font-size: 13px; margin-top: 4px; white-space: normal; }
+.reset-ok { color: var(--vert); }
+.reset-ko { color: var(--rouge); }
 .field-error, .form-error { color: var(--rouge); font-size: 15px; margin: 0; }
 .form-success { color: var(--vert); background: var(--wash); padding: 12px 14px; }
 .auth-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; font-size: 15px; }

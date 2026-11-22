@@ -8,6 +8,18 @@ const formatDate = (value) => (value ? dateFormat.format(new Date(value)) : '—
 export default function AdminPage() {
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
+  // Résultat de l'envoi du lien, par élève : { [id]: { sending, ok, text } }
+  const [resetStatus, setResetStatus] = useState({});
+
+  async function sendResetLink(student) {
+    setResetStatus((s) => ({ ...s, [student.id]: { sending: true } }));
+    try {
+      const res = await api(`/admin/students/${student.id}/reset-link`, { method: 'POST' });
+      setResetStatus((s) => ({ ...s, [student.id]: { ok: true, text: res.message } }));
+    } catch (err) {
+      setResetStatus((s) => ({ ...s, [student.id]: { ok: false, text: err.message } }));
+    }
+  }
 
   useEffect(() => {
     api('/admin/students')
@@ -38,6 +50,7 @@ export default function AdminPage() {
                     <th scope="col">Faites</th>
                     <th scope="col">Justes</th>
                     <th scope="col">Dernière activité</th>
+                    <th scope="col">Mot de passe</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,6 +64,14 @@ export default function AdminPage() {
                       <td className="num-cell">{s.answered}/{data.questionCount}</td>
                       <td className="num-cell">{s.correct}</td>
                       <td>{formatDate(s.lastActivity)}</td>
+                      <td className="reset-cell">
+                        <button type="button" className="ghost" disabled={resetStatus[s.id]?.sending} onClick={() => sendResetLink(s)}>
+                          {resetStatus[s.id]?.sending ? 'Envoi…' : 'Envoyer un lien de réinitialisation'}
+                        </button>
+                        {resetStatus[s.id]?.text && (
+                          <span className={resetStatus[s.id].ok ? 'reset-ok' : 'reset-ko'} role="status">{resetStatus[s.id].text}</span>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

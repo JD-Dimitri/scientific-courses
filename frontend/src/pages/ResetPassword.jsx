@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { api } from '../api.js';
-import AuthLayout, { Field } from '../components/AuthLayout.jsx';
+import AuthLayout, { PasswordField } from '../components/AuthLayout.jsx';
 
 const MIN_LENGTH = 10;
 
@@ -45,8 +45,8 @@ export default function ResetPassword() {
       ) : (
         <>
           <form onSubmit={handleSubmit} noValidate>
-            <Field id="password" label={`Nouveau mot de passe (${MIN_LENGTH} caractères minimum)`} type="password" autoComplete="new-password" required value={password} onChange={(e) => setPassword(e.target.value)} error={errors.password} />
-            <Field id="confirm" label="Confirme le nouveau mot de passe" type="password" autoComplete="new-password" required value={confirm} onChange={(e) => setConfirm(e.target.value)} error={errors.confirm} />
+            <PasswordField id="password" label={`Nouveau mot de passe (${MIN_LENGTH} caractères minimum)`} autoComplete="new-password" required value={password} onChange={(e) => setPassword(e.target.value)} error={errors.password} />
+            <PasswordField id="confirm" label="Confirme le nouveau mot de passe" autoComplete="new-password" required value={confirm} onChange={(e) => setConfirm(e.target.value)} error={errors.confirm} />
             {error && <p className="form-error" role="alert">{error}</p>}
             <button type="submit" disabled={sending}>{sending ? 'Enregistrement…' : 'Enregistrer le mot de passe'}</button>
           </form>

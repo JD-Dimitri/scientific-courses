@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth.jsx';
-import AuthLayout, { Field } from '../components/AuthLayout.jsx';
+import AuthLayout, { Field, PasswordField } from '../components/AuthLayout.jsx';
 
 const MIN_LENGTH = 10;
 
@@ -43,8 +43,8 @@ export default function Register() {
       <form onSubmit={handleSubmit} noValidate>
         <Field id="firstName" label="Prénom" autoComplete="given-name" required value={form.firstName} onChange={update('firstName')} error={errors.firstName} />
         <Field id="email" label="Adresse e-mail" type="email" autoComplete="email" required value={form.email} onChange={update('email')} error={errors.email} />
-        <Field id="password" label={`Mot de passe (${MIN_LENGTH} caractères minimum)`} type="password" autoComplete="new-password" required value={form.password} onChange={update('password')} error={errors.password} />
-        <Field id="confirm" label="Confirme le mot de passe" type="password" autoComplete="new-password" required value={form.confirm} onChange={update('confirm')} error={errors.confirm} />
+        <PasswordField id="password" label={`Mot de passe (${MIN_LENGTH} caractères minimum)`} autoComplete="new-password" required value={form.password} onChange={update('password')} error={errors.password} />
+        <PasswordField id="confirm" label="Confirme le mot de passe" autoComplete="new-password" required value={form.confirm} onChange={update('confirm')} error={errors.confirm} />
         {error && <p className="form-error" role="alert">{error}</p>}
         <button type="submit" disabled={sending}>{sending ? 'Création…' : 'Créer mon compte'}</button>
       </form>
