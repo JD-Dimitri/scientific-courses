@@ -17,6 +17,9 @@ Niveau visé pour la première version : de la terminale à l'entrée en prépa.
 - [x] Connexion par e-mail ou par identifiant
 - [x] Rôle administrateur et page Administration (liste des élèves et de leur progression)
 - [x] Comptes de test `admin` / `admin-test` et `eleve1` / `eleve-test` (commande `app:create-demo-accounts`, refusée en production)
+- [x] Bouton œil pour afficher ou masquer le mot de passe ; lien « Mot de passe oublié ? » sous le champ de connexion
+- [x] Administration : envoi d'un lien de réinitialisation à un élève (limite : un lien toutes les 15 minutes par compte)
+- [x] Version autonome de démonstration (`scientific-courses-demo.html`, hors dépôt) : fausse API dans le navigateur, boîte mail simulée
 - [x] Mot de passe oublié : e-mail avec lien valable 1 h, utilisable une fois (Mailpit en local)
 - [x] Modèle de données : matière, chapitre, sous-chapitre, exemple corrigé, question (entraînement ou examen), réponse de l'élève
 - [x] API des cours et de la progression

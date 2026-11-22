@@ -99,6 +99,7 @@ Toutes les routes sont sous `/api`. Sauf mention contraire, il faut être connec
 | PUT | `/questions/{id}/attempt` | Enregistrer `{correct: true\|false}`. |
 | DELETE | `/questions/{id}/attempt` | Annuler la réponse à une question. |
 | GET | `/admin/students` | Liste des comptes et progression de chacun. Administrateurs seulement. |
+| POST | `/admin/students/{id}/reset-link` | Envoie à ce compte un lien de réinitialisation par e-mail. Administrateurs seulement. |
 
 ## Sécurité
 
