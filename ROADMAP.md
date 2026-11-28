@@ -26,6 +26,7 @@ Niveau visé pour la première version : de la terminale à l'entrée en prépa.
 - [x] Commande `app:import-chapter`
 - [x] Front : connexion, inscription, mot de passe oublié, nouveau mot de passe, tableau de bord, page chapitre
 - [x] Maths, chapitre 1 « Calcul scientifique » converti en JSON (5 sous-chapitres, 100 questions, examen de 20)
+- [x] Maths, chapitre 2 « Algèbre et équations » (5 sous-chapitres, 100 questions, examen de 20), source dans `data/maths/src/build_02.py`
 
 ## Non vérifié
 
@@ -34,9 +35,9 @@ Le code a été écrit dans un environnement sans accès aux paquets Composer et
 ## À faire
 
 - [ ] Premier lancement en local et corrections
-- [ ] Validation du format du chapitre pilote par l'auteur
+- [x] Validation du format du chapitre pilote par l'auteur
 - [ ] Figure interactive « échelle des puissances de 10 » du sous-chapitre 1.1, à refaire en composant React
-- [ ] Maths : chapitres 2 à 14
+- [ ] Maths : chapitres 3 à 14
 - [ ] Informatique, chimie, physique : plans puis chapitres
 - [ ] Tests automatisés (PHPUnit pour l'API)
 - [ ] Choix de l'hébergement et d'un vrai service d'envoi d'e-mails pour la production

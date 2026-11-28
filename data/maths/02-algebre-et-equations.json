@@ -1,0 +1,743 @@
+{
+  "subject": {
+    "slug": "maths",
+    "name": "Mathématiques",
+    "position": 1
+  },
+  "chapter": {
+    "slug": "algebre-et-equations",
+    "number": 2,
+    "title": "Algèbre et équations",
+    "cnamCode": null,
+    "introHtml": "<p>Ce chapitre rassemble les outils de calcul qu'on utilise partout ensuite : transformer une expression, résoudre une équation ou une inéquation, et résoudre un système de plusieurs équations. Chaque problème concret, en chimie comme en informatique, finit par s'écrire avec eux.</p>"
+  },
+  "sections": [
+    {
+      "slug": "calcul-litteral",
+      "number": "2.1",
+      "title": "Calcul littéral",
+      "courseHtml": "<p><strong>Développer</strong>, c'est transformer un produit en somme. <strong>Factoriser</strong>, c'est l'inverse : transformer une somme en produit. Les deux écritures ont toujours la même valeur.</p>\n<div class=\"regle\">\n<p>Distributivité : \\(k(a+b)=ka+kb\\) et \\((a+b)(c+d)=ac+ad+bc+bd\\).</p>\n<p>Identités remarquables :</p>\n\\[(a+b)^2=a^2+2ab+b^2\\qquad(a-b)^2=a^2-2ab+b^2\\qquad(a+b)(a-b)=a^2-b^2\\]\n<p>Puissances : \\(a^m\\times a^n=a^{m+n}\\), \\(\\dfrac{a^m}{a^n}=a^{m-n}\\), \\((a^m)^n=a^{mn}\\), \\((ab)^n=a^nb^n\\).</p>\n</div>\n<p>Pour factoriser, on cherche d'abord un <strong>facteur commun</strong>, puis une <strong>identité remarquable</strong>.</p>\n<p>Fractions : \\(\\dfrac ab+\\dfrac cd=\\dfrac{ad+bc}{bd}\\). Pour simplifier une fraction, on factorise le numérateur et le dénominateur, puis on simplifie les <em>facteurs</em> communs. On ne simplifie jamais un terme d'une somme : \\(\\dfrac{x+3}{x}\\) ne vaut pas 3. On note aussi les valeurs interdites, qui annulent le dénominateur.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Développer \\((2x+3)(x-4)\\).</p>",
+          "solutionHtml": "<p>\\(2x\\times x+2x\\times(-4)+3\\times x+3\\times(-4)=2x^2-8x+3x-12\\).</p><p>Résultat : \\(2x^2-5x-12\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Factoriser \\(9x^2-12x+4\\).</p>",
+          "solutionHtml": "<p>\\(9x^2=(3x)^2\\), \\(4=2^2\\) et \\(12x=2\\times3x\\times2\\) : c\\'est la forme \\(a^2-2ab+b^2\\).</p><p>\\(9x^2-12x+4=(3x-2)^2\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Simplifier \\(\\dfrac{x^2-9}{x^2+3x}\\).</p>",
+          "solutionHtml": "<p>On factorise : \\(\\dfrac{(x-3)(x+3)}{x(x+3)}\\). Valeurs interdites : \\(0\\) et \\(-3\\).</p><p>On simplifie le facteur \\(x+3\\) : \\(\\dfrac{x-3}{x}\\), pour \\(x\\neq0\\) et \\(x\\neq-3\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Développe \\(3(x-5)\\).",
+          "correctionHtml": "<p>\\(3x-15\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Développe \\(-2(4-x)\\).",
+          "correctionHtml": "<p>\\(-8+2x\\). Attention : \\(-2\\times(-x)=+2x\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Développe \\((x+2)(x+5)\\).",
+          "correctionHtml": "<p>\\(x^2+5x+2x+10=x^2+7x+10\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Développe \\((x+4)^2\\).",
+          "correctionHtml": "<p>\\(x^2+8x+16\\). Le double produit \\(2\\times x\\times4\\) ne doit pas être oublié.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Développe \\((x-3)(x+3)\\).",
+          "correctionHtml": "<p>\\(x^2-9\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Factorise \\(5x+15\\).",
+          "correctionHtml": "<p>Facteur commun 5 : \\(5(x+3)\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Factorise \\(x^2-7x\\).",
+          "correctionHtml": "<p>Facteur commun \\(x\\) : \\(x(x-7)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Développe \\((3x-1)(2x+5)\\).",
+          "correctionHtml": "<p>\\(6x^2+15x-2x-5=6x^2+13x-5\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Développe \\((2x-5)^2\\).",
+          "correctionHtml": "<p>\\(4x^2-20x+25\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Factorise \\(x^2-25\\).",
+          "correctionHtml": "<p>\\((x-5)(x+5)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Factorise \\(4x^2+12x+9\\).",
+          "correctionHtml": "<p>\\((2x)^2+2\\times2x\\times3+3^2=(2x+3)^2\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Factorise \\((x+1)(x-2)+(x+1)(2x+3)\\).",
+          "correctionHtml": "<p>Facteur commun \\((x+1)\\) : \\((x+1)\\big[(x-2)+(2x+3)\\big]=(x+1)(3x+1)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Réduis au même dénominateur \\(\\dfrac1x+\\dfrac2{x+1}\\).",
+          "correctionHtml": "<p>\\(\\dfrac{x+1+2x}{x(x+1)}=\\dfrac{3x+1}{x(x+1)}\\), pour \\(x\\neq0\\) et \\(x\\neq-1\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Simplifie \\(\\dfrac{x^3\\times x^5}{x^2}\\).",
+          "correctionHtml": "<p>\\(x^{3+5-2}=x^6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Simplifie \\((2a^2b)^3\\).",
+          "correctionHtml": "<p>\\(2^3\\times(a^2)^3\\times b^3=8a^6b^3\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Factorise \\(16x^2-(x+3)^2\\).",
+          "correctionHtml": "<p>Forme \\(A^2-B^2\\) avec \\(A=4x\\), \\(B=x+3\\) : \\((4x-x-3)(4x+x+3)=(3x-3)(5x+3)\\).</p><p>On peut encore sortir 3 : \\(3(x-1)(5x+3)\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Simplifie \\(\\dfrac{x^2-4}{x^2-4x+4}\\).",
+          "correctionHtml": "<p>\\(\\dfrac{(x-2)(x+2)}{(x-2)^2}=\\dfrac{x+2}{x-2}\\), pour \\(x\\neq2\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Réduis \\(\\dfrac2{x-1}-\\dfrac1{x+1}\\).",
+          "correctionHtml": "<p>\\(\\dfrac{2(x+1)-(x-1)}{(x-1)(x+1)}=\\dfrac{x+3}{x^2-1}\\), pour \\(x\\neq\\pm1\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Développe \\((x+1)^3\\).",
+          "correctionHtml": "<p>\\((x+1)^2(x+1)=(x^2+2x+1)(x+1)=x^3+3x^2+3x+1\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Montre que pour tout entier \\(n\\), \\((n+1)^2-(n-1)^2=4n\\).",
+          "correctionHtml": "<p>\\((n^2+2n+1)-(n^2-2n+1)=4n\\).</p><p>Conséquence : la différence des carrés de deux entiers qui diffèrent de 2 est toujours un multiple de 4.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "equations",
+      "number": "2.2",
+      "title": "Équations du premier degré, produit et quotient",
+      "courseHtml": "<p>Résoudre une équation, c'est trouver toutes les valeurs de l'inconnue qui la rendent vraie. On transforme l'équation en une équation équivalente, en faisant la même opération sur les deux membres.</p>\n<div class=\"regle\">\n<ul>\n<li><strong>Premier degré</strong> : on regroupe les \\(x\\) d'un côté, les nombres de l'autre. \\(ax+b=0\\iff x=-\\dfrac ba\\) si \\(a\\neq0\\).</li>\n<li><strong>Équation produit</strong> : \\(A\\times B=0\\iff A=0\\) ou \\(B=0\\).</li>\n<li><strong>Équation quotient</strong> : \\(\\dfrac AB=0\\iff A=0\\) et \\(B\\neq0\\). On cherche d'abord les valeurs interdites.</li>\n<li>\\(x^2=k\\) : deux solutions \\(\\pm\\sqrt k\\) si \\(k\\gt0\\), une seule (0) si \\(k=0\\), aucune si \\(k\\lt0\\).</li>\n</ul>\n</div>\n<p>Piège classique : ne jamais diviser les deux membres par une expression qui contient \\(x\\), car elle peut être nulle et on perd une solution. On factorise à la place.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Résoudre \\(5x-3=2x+9\\).</p>",
+          "solutionHtml": "<p>\\(5x-2x=9+3\\), donc \\(3x=12\\) et \\(x=4\\).</p><p>Vérification : \\(5\\times4-3=17\\) et \\(2\\times4+9=17\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Résoudre \\((2x-1)(x+3)=0\\).</p>",
+          "solutionHtml": "<p>Un produit est nul si l\\'un des facteurs est nul : \\(2x-1=0\\) ou \\(x+3=0\\).</p><p>\\(S=\\left\\{-3\\,;\\dfrac12\\right\\}\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Résoudre \\(\\dfrac{x-2}{x+1}=0\\).</p>",
+          "solutionHtml": "<p>Valeur interdite : \\(x=-1\\). Le quotient est nul quand le numérateur l\\'est : \\(x=2\\).</p><p>2 n\\'est pas interdite : \\(S=\\{2\\}\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x+7=12\\).",
+          "correctionHtml": "<p>\\(x=5\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(3x=-18\\).",
+          "correctionHtml": "<p>\\(x=-6\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(4x-5=11\\).",
+          "correctionHtml": "<p>\\(4x=16\\), donc \\(x=4\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(2x+3=x-4\\).",
+          "correctionHtml": "<p>\\(x=-7\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\((x-3)(x+5)=0\\).",
+          "correctionHtml": "<p>\\(S=\\{-5\\,;3\\}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2=49\\).",
+          "correctionHtml": "<p>\\(S=\\{-7\\,;7\\}\\). On n\\'oublie pas la solution négative.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(\\dfrac x4=3\\).",
+          "correctionHtml": "<p>\\(x=12\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(3(x-2)=2(x+1)\\).",
+          "correctionHtml": "<p>\\(3x-6=2x+2\\), donc \\(x=8\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac x2+\\dfrac x3=10\\).",
+          "correctionHtml": "<p>\\(\\dfrac{3x+2x}6=10\\), donc \\(5x=60\\) et \\(x=12\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\((2x+1)(3-x)=0\\).",
+          "correctionHtml": "<p>\\(2x+1=0\\) ou \\(3-x=0\\) : \\(S=\\left\\{-\\dfrac12\\,;3\\right\\}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x^2=5x\\).",
+          "correctionHtml": "<p>On factorise au lieu de diviser par \\(x\\) : \\(x^2-5x=0\\iff x(x-5)=0\\).</p><p>\\(S=\\{0\\,;5\\}\\). En divisant par \\(x\\), on aurait perdu la solution 0.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x^2=-4\\) dans ℝ.",
+          "correctionHtml": "<p>Un carré n\\'est jamais négatif : aucune solution réelle, \\(S=\\varnothing\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac{x+4}{x-2}=0\\).",
+          "correctionHtml": "<p>Valeur interdite : 2. Numérateur nul : \\(x=-4\\). \\(S=\\{-4\\}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac{x-1}{x+3}=2\\).",
+          "correctionHtml": "<p>Valeur interdite : \\(-3\\). On multiplie par \\(x+3\\) : \\(x-1=2x+6\\), donc \\(x=-7\\).</p><p>\\(-7\\) n\\'est pas interdite : \\(S=\\{-7\\}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(4x^2-9=0\\).",
+          "correctionHtml": "<p>\\((2x-3)(2x+3)=0\\) : \\(S=\\left\\{-\\dfrac32\\,;\\dfrac32\\right\\}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\((x+1)^2=(2x-3)^2\\).",
+          "correctionHtml": "<p>On passe tout à gauche et on factorise \\(A^2-B^2\\) : \\((x+1-2x+3)(x+1+2x-3)=0\\), soit \\((4-x)(3x-2)=0\\).</p><p>\\(S=\\left\\{\\dfrac23\\,;4\\right\\}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(\\dfrac1x+\\dfrac1{x+2}=0\\).",
+          "correctionHtml": "<p>Valeurs interdites : 0 et \\(-2\\). \\(\\dfrac{x+2+x}{x(x+2)}=0\\iff2x+2=0\\).</p><p>\\(S=\\{-1\\}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous en \\(x\\) l\\'équation \\(ax+b=cx+d\\), avec \\(a\\neq c\\).",
+          "correctionHtml": "<p>\\((a-c)x=d-b\\), donc \\(x=\\dfrac{d-b}{a-c}\\). La condition \\(a\\neq c\\) permet de diviser.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Un article coûte 96 € TTC, avec une TVA de 20 %. Quel est son prix hors taxe ?",
+          "correctionHtml": "<p>\\(1{,}2\\,x=96\\), donc \\(x=80\\) €.</p><p>Erreur fréquente : retirer 20 % de 96 donne 76,80 €, ce qui est faux.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "On ajoute de l\\'eau à 50 mL d\\'une solution à 0,20 mol/L pour obtenir une concentration de 0,050 mol/L. Quel volume d\\'eau faut-il ajouter ?",
+          "correctionHtml": "<p>La quantité de matière ne change pas : \\(0{,}20\\times50=0{,}050\\times V\\), donc \\(V=200\\) mL.</p><p>Il faut ajouter \\(200-50=150\\) mL d\\'eau.</p>"
+        }
+      ]
+    },
+    {
+      "slug": "second-degre",
+      "number": "2.3",
+      "title": "Second degré",
+      "courseHtml": "<p>Un trinôme du second degré s'écrit \\(f(x)=ax^2+bx+c\\), avec \\(a\\neq0\\). Sa courbe est une parabole, tournée vers le haut si \\(a\\gt0\\), vers le bas si \\(a\\lt0\\).</p>\n<div class=\"regle\">\n<p>Forme canonique : \\(f(x)=a(x-\\alpha)^2+\\beta\\), avec \\(\\alpha=-\\dfrac b{2a}\\) et \\(\\beta=f(\\alpha)\\). Le sommet de la parabole est \\((\\alpha\\,;\\beta)\\).</p>\n<p>Discriminant : \\(\\Delta=b^2-4ac\\).</p>\n<ul>\n<li>\\(\\Delta\\gt0\\) : deux racines \\(x_{1,2}=\\dfrac{-b\\pm\\sqrt\\Delta}{2a}\\), et \\(f(x)=a(x-x_1)(x-x_2)\\).</li>\n<li>\\(\\Delta=0\\) : une racine double \\(-\\dfrac b{2a}\\), et \\(f(x)=a(x-x_0)^2\\).</li>\n<li>\\(\\Delta\\lt0\\) : pas de racine réelle, pas de factorisation dans ℝ.</li>\n</ul>\n<p>Somme et produit des racines : \\(x_1+x_2=-\\dfrac ba\\) et \\(x_1x_2=\\dfrac ca\\).</p>\n</div>\n<p>Avant de calculer \\(\\Delta\\), regarde si une factorisation directe suffit : facteur commun (\\(x^2-9x\\)) ou identité remarquable (\\(x^2-16\\)).</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Résoudre \\(x^2-6x+5=0\\) et factoriser.</p>",
+          "solutionHtml": "<p>\\(\\Delta=36-20=16\\), donc \\(x_{1,2}=\\dfrac{6\\pm4}{2}\\) : 1 et 5.</p><p>\\(x^2-6x+5=(x-1)(x-5)\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Mettre \\(x^2+4x+1\\) sous forme canonique.</p>",
+          "solutionHtml": "<p>\\(x^2+4x\\) est le début de \\((x+2)^2=x^2+4x+4\\).</p><p>Donc \\(x^2+4x+1=(x+2)^2-4+1=(x+2)^2-3\\). Sommet : \\((-2\\,;-3)\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Résoudre \\(2x^2+3x+5=0\\).</p>",
+          "solutionHtml": "<p>\\(\\Delta=9-40=-31\\lt0\\).</p><p>Aucune solution réelle.</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Calcule le discriminant de \\(x^2+2x-3\\).",
+          "correctionHtml": "<p>\\(\\Delta=4+12=16\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2+2x-3=0\\).",
+          "correctionHtml": "<p>\\(x=\\dfrac{-2\\pm4}2\\) : \\(S=\\{-3\\,;1\\}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2-4x+4=0\\).",
+          "correctionHtml": "<p>\\(\\Delta=0\\) : racine double \\(x=2\\). C\\'est aussi \\((x-2)^2=0\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2+x+1=0\\) dans ℝ.",
+          "correctionHtml": "<p>\\(\\Delta=1-4=-3\\lt0\\) : aucune solution réelle.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Donne le sommet de la parabole \\(y=x^2-6x+2\\).",
+          "correctionHtml": "<p>\\(\\alpha=\\dfrac62=3\\) et \\(\\beta=9-18+2=-7\\). Sommet \\((3\\,;-7)\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2-9x=0\\), sans discriminant.",
+          "correctionHtml": "<p>\\(x(x-9)=0\\) : \\(S=\\{0\\,;9\\}\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Factorise \\(x^2-5x+6\\).",
+          "correctionHtml": "<p>Racines 2 et 3 (somme 5, produit 6) : \\((x-2)(x-3)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(2x^2-7x+3=0\\).",
+          "correctionHtml": "<p>\\(\\Delta=49-24=25\\), \\(x=\\dfrac{7\\pm5}4\\) : \\(S=\\left\\{\\dfrac12\\,;3\\right\\}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(3x^2+6x+3=0\\).",
+          "correctionHtml": "<p>\\(\\Delta=36-36=0\\) : \\(x=-\\dfrac6{6}=-1\\). On pouvait aussi diviser par 3 : \\((x+1)^2=0\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Mets \\(x^2-8x+10\\) sous forme canonique.",
+          "correctionHtml": "<p>\\((x-4)^2=x^2-8x+16\\), donc \\(x^2-8x+10=(x-4)^2-6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Mets \\(2x^2+8x-1\\) sous forme canonique.",
+          "correctionHtml": "<p>\\(2(x^2+4x)-1=2\\big[(x+2)^2-4\\big]-1=2(x+2)^2-9\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Factorise \\(2x^2-x-1\\).",
+          "correctionHtml": "<p>\\(\\Delta=1+8=9\\), racines \\(\\dfrac{1\\pm3}4\\) : 1 et \\(-\\dfrac12\\).</p><p>\\(2(x-1)\\left(x+\\dfrac12\\right)=(x-1)(2x+1)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Trouve deux nombres dont la somme vaut 10 et le produit 21.",
+          "correctionHtml": "<p>Ce sont les racines de \\(x^2-10x+21=0\\) : \\(\\Delta=100-84=16\\), donc 3 et 7.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(-x^2+4x-3=0\\).",
+          "correctionHtml": "<p>On multiplie par \\(-1\\) : \\(x^2-4x+3=0\\), racines 1 et 3.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Pour quelles valeurs de \\(m\\) l\\'équation \\(x^2+mx+4=0\\) a-t-elle une racine double ?",
+          "correctionHtml": "<p>\\(\\Delta=m^2-16=0\\iff m=4\\) ou \\(m=-4\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(x^4-5x^2+4=0\\).",
+          "correctionHtml": "<p>On pose \\(X=x^2\\) : \\(X^2-5X+4=0\\), donc \\(X=1\\) ou \\(X=4\\).</p><p>\\(x^2=1\\) ou \\(x^2=4\\) : \\(S=\\{-2\\,;-1\\,;1\\,;2\\}\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Un rectangle a un périmètre de 20 cm et une aire de 24 cm². Quelles sont ses dimensions ?",
+          "correctionHtml": "<p>Largeur \\(x\\), longueur \\(10-x\\) : \\(x(10-x)=24\\iff x^2-10x+24=0\\).</p><p>\\(\\Delta=4\\), racines 4 et 6 : le rectangle mesure 4 cm sur 6 cm.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(x^2-2\\sqrt3\\,x+3=0\\).",
+          "correctionHtml": "<p>On reconnaît \\((x-\\sqrt3)^2=0\\) : racine double \\(x=\\sqrt3\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Une balle est lancée vers le haut : sa hauteur vaut \\(h(t)=-5t^2+20t\\) mètres. Quand retombe-t-elle au sol, et quelle hauteur maximale atteint-elle ?",
+          "correctionHtml": "<p>\\(-5t(t-4)=0\\) : elle retombe à \\(t=4\\) s.</p><p>Le sommet est en \\(t=\\dfrac{-20}{2\\times(-5)}=2\\) s, et \\(h(2)=-20+40=20\\) m.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Pour quelles valeurs de \\(m\\) l\\'équation \\(x^2-2x+m=0\\) a-t-elle deux solutions réelles distinctes ?",
+          "correctionHtml": "<p>\\(\\Delta=4-4m\\gt0\\iff m\\lt1\\).</p>"
+        }
+      ]
+    },
+    {
+      "slug": "inequations",
+      "number": "2.4",
+      "title": "Inéquations et tableaux de signes",
+      "courseHtml": "<p>Une inéquation se résout comme une équation, avec une règle en plus : <strong>multiplier ou diviser par un nombre négatif inverse le sens</strong> de l'inégalité. La solution est en général un intervalle ou une réunion d'intervalles.</p>\n<div class=\"regle\">\n<ul>\n<li>Signe de \\(ax+b\\) : il vaut 0 en \\(-\\dfrac ba\\) ; à droite de cette valeur, il a le signe de \\(a\\), à gauche le signe contraire.</li>\n<li>Signe de \\(ax^2+bx+c\\) : il a le signe de \\(a\\) partout, <em>sauf entre les racines</em> quand il y en a deux.</li>\n<li>Produit ou quotient : on dresse un <strong>tableau de signes</strong>, une ligne par facteur, et on applique la règle des signes. Les valeurs interdites sont marquées d'une double barre.</li>\n</ul>\n</div>\n<p>Méthode : tout passer d'un côté pour comparer à 0, factoriser, faire le tableau, lire la réponse. On ne multiplie jamais les deux membres par une expression dont on ne connaît pas le signe.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Résoudre \\(3-2x\\gt7\\).</p>",
+          "solutionHtml": "<p>\\(-2x\\gt4\\). On divise par \\(-2\\), qui est négatif : le sens change.</p><p>\\(x\\lt-2\\), soit \\(S=\\,]-\\infty\\,;-2[\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Résoudre \\(x^2-x-6\\le0\\).</p>",
+          "solutionHtml": "<p>Racines : \\(\\Delta=25\\), donc \\(-2\\) et 3. Comme \\(a=1\\gt0\\), le trinôme est négatif entre les racines.</p><p>\\(S=[-2\\,;3]\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Résoudre \\(\\dfrac{x-1}{x+2}\\ge0\\).</p>",
+          "solutionHtml": "<p>\\(x-1\\) s\\'annule en 1, \\(x+2\\) en \\(-2\\) (valeur interdite). Le tableau donne : positif avant \\(-2\\), négatif entre \\(-2\\) et 1, positif après 1.</p><p>\\(S=\\,]-\\infty\\,;-2[\\,\\cup\\,[1\\,;+\\infty[\\). Le 1 est inclus (quotient nul), le \\(-2\\) exclu (interdit).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x+3\\lt8\\).",
+          "correctionHtml": "<p>\\(x\\lt5\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(2x\\ge10\\).",
+          "correctionHtml": "<p>\\(x\\ge5\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(-3x\\lt12\\).",
+          "correctionHtml": "<p>On divise par \\(-3\\) et on change le sens : \\(x\\gt-4\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(5x-1\\gt2x+8\\).",
+          "correctionHtml": "<p>\\(3x\\gt9\\), donc \\(x\\gt3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Donne le signe de \\(2x-6\\) selon \\(x\\).",
+          "correctionHtml": "<p>Nul en 3, négatif si \\(x\\lt3\\), positif si \\(x\\gt3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Donne le signe de \\(-x+4\\) selon \\(x\\).",
+          "correctionHtml": "<p>Nul en 4, positif si \\(x\\lt4\\), négatif si \\(x\\gt4\\) (car \\(a=-1\\lt0\\)).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x^2\\gt0\\).",
+          "correctionHtml": "<p>Un carré est positif, et nul seulement en 0 : \\(S=\\mathbb R\\setminus\\{0\\}\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\((x-2)(x+1)\\gt0\\).",
+          "correctionHtml": "<p>Racines \\(-1\\) et 2, trinôme de coefficient \\(a=1\\gt0\\) : positif à l\\'extérieur des racines.</p><p>\\(S=\\,]-\\infty\\,;-1[\\,\\cup\\,]2\\,;+\\infty[\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x^2-9\\le0\\).",
+          "correctionHtml": "<p>Négatif entre les racines \\(-3\\) et 3 : \\(S=[-3\\,;3]\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x^2+1\\gt0\\).",
+          "correctionHtml": "<p>Toujours vrai : \\(S=\\mathbb R\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(-x^2+5x-4\\ge0\\).",
+          "correctionHtml": "<p>Racines 1 et 4. Ici \\(a=-1\\lt0\\) : le trinôme est positif entre les racines.</p><p>\\(S=[1\\,;4]\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x^2\\le2x\\).",
+          "correctionHtml": "<p>\\(x^2-2x\\le0\\iff x(x-2)\\le0\\) : \\(S=[0\\,;2]\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac{x+3}{x-1}\\lt0\\).",
+          "correctionHtml": "<p>Tableau : nul en \\(-3\\), interdit en 1, négatif entre les deux.</p><p>\\(S=\\,]-3\\,;1[\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(2x^2-3x-2\\gt0\\).",
+          "correctionHtml": "<p>\\(\\Delta=9+16=25\\), racines \\(\\dfrac{3\\pm5}4\\) : 2 et \\(-\\dfrac12\\). Positif à l\\'extérieur.</p><p>\\(S=\\,\\left]-\\infty\\,;-\\dfrac12\\right[\\,\\cup\\,]2\\,;+\\infty[\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac1x\\ge2\\).",
+          "correctionHtml": "<p>\\(\\dfrac1x-2\\ge0\\iff\\dfrac{1-2x}x\\ge0\\). Nul en \\(\\dfrac12\\), interdit en 0.</p><p>Tableau : positif entre 0 et \\(\\dfrac12\\). \\(S=\\,\\left]0\\,;\\dfrac12\\right]\\).</p><p>On ne multiplie pas par \\(x\\), dont on ne connaît pas le signe.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\((x-1)^2(x+2)\\ge0\\).",
+          "correctionHtml": "<p>\\((x-1)^2\\ge0\\) toujours, donc le signe est celui de \\(x+2\\), sauf en \\(x=1\\) où le produit est nul (donc solution).</p><p>\\(S=[-2\\,;+\\infty[\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(\\dfrac{2x-1}{x+3}\\le1\\).",
+          "correctionHtml": "<p>\\(\\dfrac{2x-1-(x+3)}{x+3}\\le0\\iff\\dfrac{x-4}{x+3}\\le0\\).</p><p>\\(S=\\,]-3\\,;4]\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Pour quelles valeurs de \\(x\\) l\\'expression \\(\\sqrt{6-x-x^2}\\) est-elle définie ?",
+          "correctionHtml": "<p>Il faut \\(-x^2-x+6\\ge0\\iff x^2+x-6\\le0\\). Racines \\(-3\\) et 2.</p><p>\\(x\\in[-3\\,;2]\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Abonnement A : 20 € plus 2 € par séance. Formule B : 5 € par séance. À partir de combien de séances A est-il moins cher ?",
+          "correctionHtml": "<p>\\(20+2n\\lt5n\\iff3n\\gt20\\iff n\\gt6{,}67\\).</p><p>À partir de 7 séances.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(x^3\\gt x\\).",
+          "correctionHtml": "<p>\\(x^3-x=x(x-1)(x+1)\\gt0\\). Tableau à trois facteurs, racines \\(-1\\), 0, 1.</p><p>\\(S=\\,]-1\\,;0[\\,\\cup\\,]1\\,;+\\infty[\\).</p>"
+        }
+      ]
+    },
+    {
+      "slug": "systemes",
+      "number": "2.5",
+      "title": "Systèmes linéaires",
+      "courseHtml": "<p>Un système linéaire réunit plusieurs équations du premier degré qui doivent être vraies en même temps. Avec deux inconnues, chaque équation est une droite, et la solution est leur point d'intersection.</p>\n<div class=\"regle\">\n<ul>\n<li><strong>Substitution</strong> : on exprime une inconnue en fonction de l'autre dans une équation, puis on remplace dans l'autre.</li>\n<li><strong>Combinaison</strong> : on multiplie les équations pour que l'addition ou la soustraction élimine une inconnue.</li>\n<li>Pour \\(ax+by=e\\) et \\(cx+dy=f\\) : si \\(ad-bc\\neq0\\), une solution unique. Si \\(ad-bc=0\\), soit aucune solution (droites parallèles), soit une infinité (même droite).</li>\n<li>Trois inconnues : on élimine la même inconnue dans deux paires d'équations, on résout le système à deux inconnues obtenu, puis on remonte. C'est la méthode du pivot de Gauss.</li>\n</ul>\n</div>\n<p>Toujours vérifier la solution dans <em>toutes</em> les équations de départ. Le nombre \\(ad-bc\\) est le déterminant, qu'on retrouve au chapitre sur les matrices.</p>",
+      "examples": [
+        {
+          "title": "Exemple 1",
+          "statementHtml": "<p>Résoudre \\(x+y=7\\) et \\(x-y=1\\).</p>",
+          "solutionHtml": "<p>En additionnant : \\(2x=8\\), donc \\(x=4\\). Puis \\(y=7-4=3\\).</p><p>Solution \\((4\\,;3)\\).</p>"
+        },
+        {
+          "title": "Exemple 2",
+          "statementHtml": "<p>Résoudre \\(2x+3y=12\\) et \\(x-y=1\\).</p>",
+          "solutionHtml": "<p>La seconde donne \\(x=1+y\\). Dans la première : \\(2+2y+3y=12\\), donc \\(y=2\\) et \\(x=3\\).</p><p>Solution \\((3\\,;2)\\).</p>"
+        },
+        {
+          "title": "Exemple 3",
+          "statementHtml": "<p>Résoudre \\(x+y+z=6\\), \\(x-y+z=2\\), \\(2x+y-z=1\\).</p>",
+          "solutionHtml": "<p>Première moins deuxième : \\(2y=4\\), donc \\(y=2\\). Il reste \\(x+z=4\\) et \\(2x-z=-1\\).</p><p>En additionnant : \\(3x=3\\), donc \\(x=1\\) et \\(z=3\\). Vérification dans la troisième : \\(2+2-3=1\\). Solution \\((1\\,;2\\,;3)\\).</p>"
+        }
+      ],
+      "questions": [
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x+y=10\\) et \\(x-y=4\\).",
+          "correctionHtml": "<p>Addition : \\(2x=14\\), \\(x=7\\), \\(y=3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(y=2x\\) et \\(x+y=9\\).",
+          "correctionHtml": "<p>\\(x+2x=9\\) : \\(x=3\\), \\(y=6\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x=3\\) et \\(2x+y=10\\).",
+          "correctionHtml": "<p>\\(6+y=10\\) : \\(y=4\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(2x+y=8\\) et \\(x-y=1\\).",
+          "correctionHtml": "<p>Addition : \\(3x=9\\), \\(x=3\\), \\(y=2\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Le couple \\((2\\,;-1)\\) est-il solution de \\(3x+2y=4\\) et \\(x-y=3\\) ?",
+          "correctionHtml": "<p>\\(6-2=4\\) et \\(2+1=3\\) : oui.</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(x+2y=7\\) et \\(x=1\\).",
+          "correctionHtml": "<p>\\(1+2y=7\\) : \\(y=3\\).</p>"
+        },
+        {
+          "level": 1,
+          "statementHtml": "Résous \\(3x-y=5\\) et \\(y=1\\).",
+          "correctionHtml": "<p>\\(3x=6\\) : \\(x=2\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(3x+2y=16\\) et \\(2x-y=6\\).",
+          "correctionHtml": "<p>\\(y=2x-6\\). Puis \\(3x+4x-12=16\\), donc \\(x=4\\) et \\(y=2\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(5x+3y=1\\) et \\(2x+3y=-5\\).",
+          "correctionHtml": "<p>Soustraction : \\(3x=6\\), \\(x=2\\). Puis \\(3y=1-10\\), \\(y=-3\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(2x+4y=6\\) et \\(x+2y=3\\).",
+          "correctionHtml": "<p>La première est le double de la seconde : c\\'est la même droite. Infinité de solutions : tous les couples \\((3-2y\\,;y)\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(x+y=2\\) et \\(x+y=5\\).",
+          "correctionHtml": "<p>Contradiction : aucune solution. Les deux droites sont parallèles.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Le système \\(2x+3y=1\\), \\(4x+6y=5\\) a-t-il une solution unique ?",
+          "correctionHtml": "<p>\\(ad-bc=2\\times6-3\\times4=0\\) : non. Ici \\(4x+6y\\) vaudrait 2, pas 5 : aucune solution.</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Résous \\(\\dfrac x2+\\dfrac y3=4\\) et \\(x-y=3\\).",
+          "correctionHtml": "<p>On multiplie la première par 6 : \\(3x+2y=24\\). Avec \\(x=y+3\\) : \\(5y+9=24\\), \\(y=3\\), \\(x=6\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Au cinéma, une place adulte coûte 9 € et une place enfant 6 €. On achète 7 places pour 51 €. Combien de places de chaque ?",
+          "correctionHtml": "<p>\\(a+e=7\\) et \\(9a+6e=51\\). Avec \\(e=7-a\\) : \\(3a+42=51\\), donc \\(a=3\\) et \\(e=4\\).</p>"
+        },
+        {
+          "level": 2,
+          "statementHtml": "Trouve l\\'équation \\(y=ax+b\\) de la droite passant par \\((1\\,;5)\\) et \\((3\\,;9)\\).",
+          "correctionHtml": "<p>\\(a+b=5\\) et \\(3a+b=9\\). Soustraction : \\(2a=4\\), \\(a=2\\), \\(b=3\\). Droite \\(y=2x+3\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(x+y+z=6\\), \\(x-y=1\\), \\(y-z=-2\\).",
+          "correctionHtml": "<p>\\(x=y+1\\) et \\(z=y+2\\). Dans la première : \\(3y+3=6\\), donc \\(y=1\\).</p><p>Solution \\((2\\,;1\\,;3)\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Résous \\(x+2y+z=8\\), \\(2x-y+z=3\\), \\(x+y-z=0\\).",
+          "correctionHtml": "<p>On élimine \\(x\\) : \\(L_2-2L_1\\) donne \\(-5y-z=-13\\) ; \\(L_3-L_1\\) donne \\(-y-2z=-8\\).</p><p>De la seconde : \\(y=8-2z\\). Dans la première : \\(-40+10z-z=-13\\), donc \\(z=3\\), \\(y=2\\), puis \\(x=8-4-3=1\\).</p><p>Solution \\((1\\,;2\\,;3)\\).</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Pour quelle valeur de \\(m\\) le système \\(x+my=1\\), \\(2x+4y=3\\) n\\'a-t-il pas de solution unique ? Que se passe-t-il alors ?",
+          "correctionHtml": "<p>\\(ad-bc=4-2m=0\\iff m=2\\).</p><p>Avec \\(m=2\\) : \\(x+2y=1\\) donne \\(2x+4y=2\\), incompatible avec 3. Aucune solution.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "On mélange une solution A à 10 g/L et une solution B à 40 g/L pour obtenir 300 mL à 20 g/L. Quels volumes de A et de B faut-il ?",
+          "correctionHtml": "<p>\\(a+b=300\\) et \\(10a+40b=20\\times300=6\\,000\\) (en mg, volumes en mL).</p><p>Avec \\(b=300-a\\) : \\(10a+12\\,000-40a=6\\,000\\), donc \\(a=200\\) mL et \\(b=100\\) mL.</p>"
+        },
+        {
+          "level": 3,
+          "statementHtml": "Trouve la parabole \\(y=ax^2+bx+c\\) qui passe par \\((0\\,;1)\\), \\((1\\,;2)\\) et \\((-1\\,;4)\\).",
+          "correctionHtml": "<p>\\(c=1\\), puis \\(a+b=1\\) et \\(a-b=3\\).</p><p>\\(a=2\\), \\(b=-1\\) : \\(y=2x^2-x+1\\).</p>"
+        }
+      ]
+    }
+  ],
+  "exam": [
+    {
+      "level": 1,
+      "statementHtml": "Développe \\((x+3)(x-2)\\). <em>(2.1)</em>",
+      "correctionHtml": "<p>\\(x^2-2x+3x-6=x^2+x-6\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Résous \\(7x-4=3x+8\\). <em>(2.2)</em>",
+      "correctionHtml": "<p>\\(4x=12\\), \\(x=3\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Factorise \\(x^2-16\\). <em>(2.1)</em>",
+      "correctionHtml": "<p>\\((x-4)(x+4)\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Résous \\(x+y=8\\) et \\(x-y=2\\). <em>(2.5)</em>",
+      "correctionHtml": "<p>\\(x=5\\), \\(y=3\\).</p>"
+    },
+    {
+      "level": 1,
+      "statementHtml": "Résous \\(-2x+6\\ge0\\). <em>(2.4)</em>",
+      "correctionHtml": "<p>\\(-2x\\ge-6\\), donc \\(x\\le3\\) (le sens change).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Développe \\((3x+2)^2\\). <em>(2.1)</em>",
+      "correctionHtml": "<p>\\(9x^2+12x+4\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Résous \\((x-4)(2x+1)=0\\). <em>(2.2)</em>",
+      "correctionHtml": "<p>\\(S=\\left\\{-\\dfrac12\\,;4\\right\\}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Résous \\(x^2-3x-10=0\\). <em>(2.3)</em>",
+      "correctionHtml": "<p>\\(\\Delta=9+40=49\\), \\(x=\\dfrac{3\\pm7}2\\) : \\(S=\\{-2\\,;5\\}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Mets \\(x^2+6x+5\\) sous forme canonique. <em>(2.3)</em>",
+      "correctionHtml": "<p>\\((x+3)^2-9+5=(x+3)^2-4\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Résous \\(x^2-x-6\\gt0\\). <em>(2.4)</em>",
+      "correctionHtml": "<p>Racines \\(-2\\) et 3, \\(a\\gt0\\) : \\(S=\\,]-\\infty\\,;-2[\\,\\cup\\,]3\\,;+\\infty[\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Simplifie \\(\\dfrac{x^2-1}{x+1}\\). <em>(2.1)</em>",
+      "correctionHtml": "<p>\\(\\dfrac{(x-1)(x+1)}{x+1}=x-1\\), pour \\(x\\neq-1\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Résous \\(\\dfrac{2x-6}{x+5}=0\\). <em>(2.2)</em>",
+      "correctionHtml": "<p>Valeur interdite \\(-5\\). \\(2x-6=0\\) : \\(S=\\{3\\}\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Résous \\(2x+y=7\\) et \\(x+3y=11\\). <em>(2.5)</em>",
+      "correctionHtml": "<p>\\(y=7-2x\\), puis \\(x+21-6x=11\\) : \\(x=2\\), \\(y=3\\).</p>"
+    },
+    {
+      "level": 2,
+      "statementHtml": "Pour quelles valeurs de \\(m\\) l\\'équation \\(x^2+6x+m=0\\) a-t-elle deux solutions distinctes ? <em>(2.3)</em>",
+      "correctionHtml": "<p>\\(\\Delta=36-4m\\gt0\\iff m\\lt9\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Résous \\(\\dfrac x{x-1}\\ge2\\). <em>(2.4)</em>",
+      "correctionHtml": "<p>\\(\\dfrac{x-2(x-1)}{x-1}\\ge0\\iff\\dfrac{2-x}{x-1}\\ge0\\).</p><p>\\(S=\\,]1\\,;2]\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Résous \\((3x-1)^2=(x+5)^2\\). <em>(2.2)</em>",
+      "correctionHtml": "<p>\\((3x-1-x-5)(3x-1+x+5)=0\\iff(2x-6)(4x+4)=0\\).</p><p>\\(S=\\{-1\\,;3\\}\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Résous \\(2x^4-3x^2+1=0\\). <em>(2.3)</em>",
+      "correctionHtml": "<p>Avec \\(X=x^2\\) : \\(2X^2-3X+1=0\\), donc \\(X=1\\) ou \\(X=\\dfrac12\\).</p><p>\\(S=\\left\\{-1\\,;-\\dfrac{\\sqrt2}2\\,;\\dfrac{\\sqrt2}2\\,;1\\right\\}\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Résous \\(x+y+z=3\\), \\(2x-y+z=4\\), \\(x+2y-z=-1\\). <em>(2.5)</em>",
+      "correctionHtml": "<p>\\(L_2-L_1\\) : \\(x-2y=1\\). \\(L_1+L_3\\) : \\(2x+3y=2\\).</p><p>Avec \\(x=1+2y\\) : \\(2+7y=2\\), donc \\(y=0\\), \\(x=1\\), \\(z=2\\). Solution \\((1\\,;0\\,;2)\\).</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "La longueur d\\'un rectangle dépasse sa largeur de 3 cm, et son aire vaut 40 cm². Quelles sont ses dimensions ? <em>(2.3)</em>",
+      "correctionHtml": "<p>\\(x(x+3)=40\\iff x^2+3x-40=0\\). \\(\\Delta=169\\), racines 5 et \\(-8\\).</p><p>Une largeur est positive : 5 cm sur 8 cm.</p>"
+    },
+    {
+      "level": 3,
+      "statementHtml": "Une huile A contient 2 % d\\'essence parfumée, une huile B en contient 12 %. Quels volumes mélanger pour obtenir 50 mL d\\'huile à 6 % ? <em>(2.5)</em>",
+      "correctionHtml": "<p>\\(a+b=50\\) et \\(0{,}02a+0{,}12b=0{,}06\\times50=3\\).</p><p>Avec \\(a=50-b\\) : \\(1+0{,}10\\,b=3\\), donc \\(b=20\\) mL et \\(a=30\\) mL.</p>"
+    }
+  ]
+}

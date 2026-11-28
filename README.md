@@ -49,6 +49,7 @@ php bin/console doctrine:database:create
 php bin/console doctrine:migrations:diff
 php bin/console doctrine:migrations:migrate
 php bin/console app:import-chapter ../data/maths/01-calcul-scientifique.json
+php bin/console app:import-chapter ../data/maths/02-algebre-et-equations.json
 php bin/console app:create-demo-accounts
 ```
 
